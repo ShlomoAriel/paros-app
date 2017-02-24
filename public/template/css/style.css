@@ -1,7 +1,4 @@
 @charset "UTF-8";
-#test{
-  background:red;
-}
 /**
 * Template Style
 *
@@ -412,7 +409,6 @@ body {
   line-height: 1.46667;
   color: #979b9b;
   background-color: #fff;
-  background: red!important;
 }
 
 input,
