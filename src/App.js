@@ -1,6 +1,7 @@
 import React, { Component, PropTypes} from 'react';
 import Header from './components/common/Header'
 import Footer from './components/common/Footer'
+import GalleryPage from './components/gallery/ImageGallery';
 // import logo from './logo.svg';
 import './App.css';
 

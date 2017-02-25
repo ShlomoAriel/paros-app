@@ -5,7 +5,7 @@ import HomePage from './components/home/HomePage';
 import AboutPage from './components/about/AboutPage';
 import ContactPage from './components/contact/ContactPage';
 import PackagePage from './components/package/PackagePage';
-import GalleryPage from './components/gallery/GalleryPage';
+import GalleryPage from './components/gallery/ImageGallery';
 // import CoursesPage from './components/course/CoursesPage';
 // import ManageCoursePage from './components/course/ManageCoursePage'; //eslint-disable-line import/no-named-as-default
 

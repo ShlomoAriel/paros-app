@@ -19,3 +19,6 @@ body {
 .rd-navbar-static .rd-navbar-nav > li.focus > a, .rd-navbar-static .rd-navbar-nav > li:hover > a, .rd-navbar-fullwidth .rd-navbar-nav > li.focus > a, .rd-navbar-fullwidth .rd-navbar-nav > li:hover > a{
 	color:#3BB0F4;
 }
+#range-fix{
+	display:block;
+}
