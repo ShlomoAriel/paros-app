@@ -7,21 +7,21 @@ import image3 from '../../../public/template/images/index-3-370x262.jpg';
 class Header extends Component {
   render() {
     return (
-          <header className="page-head header-1 text-center">
-              <div className="jumbotron-variant-1">
-                <h1><a>Magic Garden</a></h1>
-                <h5>Yoga and Food</h5>
-              </div>
-              <div data-height="" data-min-height="" className="swiper-container swiper-slider">
-                <div className="swiper-wrapper">
-                  <div data-slide-bg={image1} className="swiper-slide" style={{backgroundImage:"url("+image1+")"}}></div>
-                  <div data-slide-bg={image2} className="swiper-slide"></div>
-                  <div data-slide-bg={image3} className="swiper-slide"></div>
-                </div>
-                <div className="swiper-pagination"></div>
-              </div>
-              <div className="rd-navbar-wrap">
-                <nav data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fullwidth" data-sm-device-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" className="rd-navbar rd-navbar-static rd-navbar--is-stuck" data-sm-stick-up-offset="900px" data-md-stick-up-offset="900px" data-lg-stick-up-offset="1000px">
+          <header className="page-head bg-lighter header-2 text-center">
+        <ul className="list-inline">
+          <li><a href="#">twitter</a></li>
+          <li><a href="#">facebook</a></li>
+          <li><a href="#">pinterest</a></li>
+          <li><a href="#">youtube</a></li>
+          <li><a href="#">instagram</a></li>
+        </ul>
+        <div className="jumbotron-variant-1"><span className="material-icons-notifications_active icon-lg icon-white"></span>
+          <h1><a href="./">Apartments</a></h1>
+          <h5>We'll help you find your new home</h5>
+        </div>
+    
+         <div className="rd-navbar-wrap">
+                <nav data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fullwidth" data-sm-device-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" className="rd-navbar rd-navbar-static" data-sm-stick-up-offset="900px" data-md-stick-up-offset="900px" data-lg-stick-up-offset="1000px">
                   <div className="rd-navbar-inner">
                     <div className="rd-navbar-inner-wrap">
                         <div className="rd-navbar-panel">
@@ -41,7 +41,7 @@ class Header extends Component {
                 </div>
               </nav>
             </div>
-          </header>
+      </header>
     );
   }
 }

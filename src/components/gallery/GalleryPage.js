@@ -14,6 +14,15 @@ class GalleryPage extends React.Component{
   render(){
     return(
       <main className="page-content">
+      <section className="section-sm-top-133 text-center section-top-31">
+          <div className="shell text-center">
+            <h5 className="tt-u">Packages</h5>
+            <ol className="breadcrumb">
+              <li><Link to="/" activeClassName="active">Home</Link></li>
+              <li>About</li>
+            </ol>
+          </div>
+        </section>
        <section className="section-lg-top-145 section-sm-bottom-60 section-34 border-bottom section-md-top-52">
           <div className="shell">
             <div className="row">

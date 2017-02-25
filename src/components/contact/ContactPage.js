@@ -1,11 +1,20 @@
 import React from 'react'
-
+import {Link} from 'react-router';
 
 class ContactPage extends React.Component{
   render(){
     return(
       <main className="page-content">
-                <section className="section-60 border-bottom">
+        <section className="section-sm-top-133 text-center section-top-31">
+          <div className="shell text-center">
+            <h5 className="tt-u">Contact</h5>
+            <ol className="breadcrumb">
+              <li><Link to="/" activeClassName="active">Home</Link></li>
+              <li>About</li>
+            </ol>
+          </div>
+        </section>
+                <section className="section-sm-top-133 border-bottom">
                   <div className="shell">
                     <h2 className="text-center divider">Contact us</h2>
                     

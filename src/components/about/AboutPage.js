@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router';
 
 
 class AboutPage extends React.Component{
@@ -8,9 +9,9 @@ class AboutPage extends React.Component{
        
         <section className="section-sm-top-133 text-center section-top-31">
           <div className="shell text-center">
-            <h5 className="tt-u">about</h5>
+            <h5 className="tt-u">About</h5>
             <ol className="breadcrumb">
-              <li><a href="index.html">Home</a></li>
+              <li><Link to="/" activeClassName="active">Home</Link></li>
               <li>About</li>
             </ol>
           </div>

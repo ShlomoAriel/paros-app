@@ -22,7 +22,7 @@ class HomePage extends React.Component{
 			
 	        <main className="page-content">
         
-        <section className="section-52 text-center section-md-bottom-153">
+        <section className="section-sm-top-133 text-center section-md-bottom-153">
           <div className="shell">
             <h2 className="divider">ברוכים הבאים</h2>
             <div className="range">
@@ -64,7 +64,7 @@ class HomePage extends React.Component{
         
         <section className="section-md-top-150 text-center section-md-bottom-31 section-52">
           <div className="shell-fluid inset-left-0 inset-right-0">
-            <h2 className="divider">Services</h2>
+            <h2 className="divider">מוצרים</h2>
             <div className="range range-condensed">
               <div className="cell-xs-6 cell-md-3 cell-xs-push-1 cell-md-push-1">
                 <div className="thumbnail-variant-1"><a href="#" className="img-link">
@@ -105,19 +105,10 @@ class HomePage extends React.Component{
             </div>
           </div>
         </section>
-        
-        <section className="section-60 txt-white text-center bg-image bg-image-1 section-xl">
-          <div className="shell">
-            <h2 className="divider divider-variant-1">Property Management</h2>
-            <div className="range">
-              <div className="cell-md-10 cell-md-preffix-1">
-                <h5>We provide complete rental Property Management and our services for luxury and affordable condos, apartments, penthouses, lofts, townhouses, houses and mansions.</h5>
-                <h5 className="offset-top-0">Our licensed Property Managers provide specialized services to suit the type of management appropriate to your real estate investment property and the options that best serve you, our client.</h5>
-              </div>
-            </div>
-          </div>
-        </section>
          <section className="text-center">
+         <div className="shell-fluid inset-left-0 inset-right-0">
+            <h2 className="divider">חבילות</h2>
+            <div className="range range-condensed">
           <div className="shell-fluid inset-left-0 inset-right-0">
             <div className="range range-condensed">
               <div className="cell-sm-4 overflow-hidden">
@@ -145,11 +136,13 @@ class HomePage extends React.Component{
                 </div>
               </div>
             </div>
+            </div>
+            </div>
           </div>
         </section>
         <section className="section-sm-top-130 text-center section-bottom-0 section-top-52">
           <div className="shell-fluid inset-left-0 inset-right-0">
-            <h2 className="divider">Gallery</h2>
+            <h2 className="divider">הגן</h2>
             
             <div data-photo-swipe-gallery="gallery" className="range range-condensed">
               <div className="cell-xs-4 overflow-hidden"><a data-photo-swipe-item="" data-size="684x693" href="images/index-14-684x693_original.jpg" className="img-link img-link-2">

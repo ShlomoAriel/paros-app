@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'react-router';
+
 import image1 from '../../../public/template/images/gallery_list-1.jpg';
 import image2 from '../../../public/template/images/gallery_list-2.jpg';
 import image3 from '../../../public/template/images/gallery_list-3.jpg';
@@ -14,6 +16,15 @@ class ContactPage extends React.Component{
   render(){
     return(
       <main className="page-content">
+      <section className="section-sm-top-133 text-center section-top-31">
+          <div className="shell text-center">
+            <h5 className="tt-u">Packages</h5>
+            <ol className="breadcrumb">
+              <li><Link to="/" activeClassName="active">Home</Link></li>
+              <li>About</li>
+            </ol>
+          </div>
+        </section>
          <section className="section-lg-top-145 section-sm-bottom-60 section-34 border-bottom section-md-top-52">
           <div className="shell">
             <div className="row">

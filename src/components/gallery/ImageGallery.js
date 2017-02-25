@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 class ImageGallery2 extends React.Component {
@@ -26,7 +27,16 @@ class ImageGallery2 extends React.Component {
 
     return (
       <main className="page-content">
-        <section className="section-60 border-bottom container">
+      <section className="section-sm-top-133 text-center section-top-31">
+          <div className="shell text-center">
+            <h5 className="tt-u">Gallery</h5>
+            <ol className="breadcrumb">
+              <li><Link to="/" activeClassName="active">Home</Link></li>
+              <li>About</li>
+            </ol>
+          </div>
+        </section>
+        <section className="section-sm-top-133 border-bottom container">
           <div className="shell-fluid inset-left-0 inset-right-0">
             <h2 className="divider text-center">Gallery</h2>
             <div className="range range-condensed" id="range-fix">
