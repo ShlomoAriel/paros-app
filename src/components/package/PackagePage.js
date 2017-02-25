@@ -1,5 +1,4 @@
 import React from 'react'
-import {Link} from 'react-router'
 import image1 from '../../../public/template/images/gallery_list-1.jpg';
 import image2 from '../../../public/template/images/gallery_list-2.jpg';
 import image3 from '../../../public/template/images/gallery_list-3.jpg';

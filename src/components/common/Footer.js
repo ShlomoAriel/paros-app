@@ -1,8 +1,4 @@
-import React, { Component, PropTypes} from 'react';
-import {Link, IndexLink} from 'react-router';
-import image1 from '../../../public/template/images/slider-1-2050x1040.jpg';
-import image2 from '../../../public/template/images/index-2-370x262.jpg';
-import image3 from '../../../public/template/images/index-3-370x262.jpg';
+import React, { Component} from 'react';
 
 class Footer extends Component {
   render() {

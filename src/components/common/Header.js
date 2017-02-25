@@ -1,4 +1,4 @@
-import React, { Component, PropTypes} from 'react';
+import React, { Component} from 'react';
 import {Link, IndexLink} from 'react-router';
 import image1 from '../../../public/template/images/slider-1-2050x1040.jpg';
 import image2 from '../../../public/template/images/index-2-370x262.jpg';
@@ -34,14 +34,7 @@ class Header extends Component {
                           <li><Link to="/about" activeClassName="active">About</Link></li>
                           <li><Link to="/contact" activeClassName="active">Contact</Link></li>
                           <li><Link to="/package" activeClassName="active">Packages</Link></li>
-                          <li><a href="gallery.html">Gallery</a>
-                            <ul className="rd-navbar-dropdown">
-                              <li><a href="gallery_masonry.html">Masonry Style</a></li>
-                              <li><a href="gallery_grid.html">Grid Style</a></li>
-                              <li><a href="gallery_justified.html">Justified Style</a></li>
-                              <li><a href="gallery_list.html">List Style</a></li>
-                            </ul>
-                            </li>
+                          <li><Link to="/gallery" activeClassName="active">Gallery</Link></li>
                         </ul>
                     </div>
                   </div>
