@@ -32,6 +32,8 @@ class Header extends Component {
                         <ul className="rd-navbar-nav">
                           <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
                           <li><Link to="/about" activeClassName="active">About</Link></li>
+                          <li><Link to="/contact" activeClassName="active">Contact</Link></li>
+                          <li><Link to="/package" activeClassName="active">Packages</Link></li>
                           <li><a href="gallery.html">Gallery</a>
                             <ul className="rd-navbar-dropdown">
                               <li><a href="gallery_masonry.html">Masonry Style</a></li>
@@ -40,17 +42,6 @@ class Header extends Component {
                               <li><a href="gallery_list.html">List Style</a></li>
                             </ul>
                             </li>
-                            <li><a href="blog.html">Blog</a>
-                              <ul className="rd-navbar-dropdown">
-                                <li><a href="blog-post.html">Blog Post</a></li>
-                                <li><a href="image-format.html">Image Format</a></li>
-                                <li><a href="video-format.html">Video Format</a></li>
-                                <li><a href="audio-format.html">Audio Format</a></li>
-                                <li><a href="gallery-format.html">Gallery Format</a></li>
-                                <li><a href="choice.html">Your Choice</a></li>
-                              </ul>
-                            </li>
-                            <li><a href="contacts.html">Contacts</a></li>
                         </ul>
                     </div>
                   </div>

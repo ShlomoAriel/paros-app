@@ -25,7 +25,7 @@ class HomePage extends React.Component{
         
         <section className="section-52 text-center section-md-bottom-153">
           <div className="shell">
-            <h2 className="divider">welcome</h2>
+            <h2 className="divider">ברוכים הבאים</h2>
             <div className="range">
               <div className="cell-md-10 cell-md-preffix-1">
                 <h5 className="txt-base">
@@ -118,25 +118,7 @@ class HomePage extends React.Component{
             </div>
           </div>
         </section>
-        
-        <section className="section-sm-top-130 text-center section-bottom-0 section-top-52">
-          <div className="shell-fluid inset-left-0 inset-right-0">
-            <h2 className="divider">Gallery</h2>
-            
-            <div data-photo-swipe-gallery="gallery" className="range range-condensed">
-              <div className="cell-xs-4 overflow-hidden"><a data-photo-swipe-item="" data-size="684x693" href="images/index-14-684x693_original.jpg" className="img-link img-link-2">
-              <img width="684" height="693" src={imageGallery1} alt=""/></a><a data-photo-swipe-item="" data-size="684x1087" href="images/index-17-684x1087_original.jpg" className="img-link img-link-2">
-              <img width="684" height="1087" src={imageGallery2} alt=""/></a></div>
-              <div className="cell-xs-4 overflow-hidden margin-xs-top-1"><a data-photo-swipe-item="" data-size="684x916" href="images/index-15-684x916_original.jpg" className="img-link img-link-2">
-              <img width="684" height="916" src={imageGallery3} alt=""/></a><a data-photo-swipe-item="" data-size="684x864" href="images/index-18-684x864_original.jpg" className="img-link img-link-2">
-              <img width="684" height="864" src={imageGallery4} alt=""/></a></div>
-              <div className="cell-xs-4 overflow-hidden margin-xs-top-1"><a data-photo-swipe-item="" data-size="684x730" href="images/index-16-684x730_original.jpg" className="img-link img-link-2">
-              <img width="684" height="730" src={imageGallery5} alt=""/></a><a data-photo-swipe-item="" data-size="684x1050" href="images/index-19-684x1050_original.jpg" className="img-link img-link-2">
-              <img width="684" height="1050" src={imageGallery6} alt=""/></a></div>
-            </div>
-          </div>
-        </section>
-        <section className="text-center">
+         <section className="text-center">
           <div className="shell-fluid inset-left-0 inset-right-0">
             <div className="range range-condensed">
               <div className="cell-sm-4 overflow-hidden">
@@ -166,41 +148,20 @@ class HomePage extends React.Component{
             </div>
           </div>
         </section>
-        <section className="section-md-top-145 section-sm-bottom-68 section-68">
-          <h2 className="divider text-center">Contacts</h2>
-          
-          <div className="rd-google-map offset-sm-top-104 offset-top-40">
-            <div id="rd-google-map" data-zoom="15" data-x="-73.9874068" data-y="40.643180" data-styles="[{&quot;featureType&quot;:&quot;water&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#e9e9e9&quot;},{&quot;lightness&quot;:17}]},{&quot;featureType&quot;:&quot;landscape&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f5f5f5&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:17}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:29},{&quot;weight&quot;:0.2}]},{&quot;featureType&quot;:&quot;road.arterial&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:18}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:16}]},{&quot;featureType&quot;:&quot;poi&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f5f5f5&quot;},{&quot;lightness&quot;:21}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#dedede&quot;},{&quot;lightness&quot;:21}]},{&quot;elementType&quot;:&quot;labels.text.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;color&quot;:&quot;#ffffff&quot;},{&quot;lightness&quot;:16}]},{&quot;elementType&quot;:&quot;labels.text.fill&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:36},{&quot;color&quot;:&quot;#333333&quot;},{&quot;lightness&quot;:40}]},{&quot;elementType&quot;:&quot;labels.icon&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;elementType&quot;:&quot;geometry&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#f2f2f2&quot;},{&quot;lightness&quot;:19}]},{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fefefe&quot;},{&quot;lightness&quot;:20}]},{&quot;featureType&quot;:&quot;administrative&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#fefefe&quot;},{&quot;lightness&quot;:17},{&quot;weight&quot;:1.2}]}]" className="rd-google-map__model"></div>
-            <ul className="map_locations">
-              <li data-x="-73.9874068" data-y="40.643180">
-                <p>9870 St Vincent Place, Glasgow, DC 45 Fr 45.</p>
-              </li>
-            </ul>
-          </div>
-          <div className="range text-center offset-top-93">
-            <div className="cell-xs-6 text-xs-right">
-              <dl className="contact-info">
-                <dt>Freephone:</dt> 
-                <dd><a href="callto:#">+1 800 559 6580</a></dd>
-              </dl>
-              <dl className="contact-info">
-                <dt>Telephone: 
-                </dt>
-                <dd><a href="callto:#">+1 959 603 6035</a></dd>
-              </dl>
-              <dl className="contact-info">
-                <dt>FAX: 
-                </dt>
-                <dd><a href="callto:#">+1 504 889 9898</a></dd>
-              </dl>
-              <dl className="contact-info">
-                <dt className="offset-top-22">E-mail: 
-                </dt>
-                <dd className="offset-top-22"><a href="mailto:#">mail@demolink.org</a></dd>
-              </dl>
-            </div>
-            <div className="cell-xs-6 text-xs-left">
-              <address className="address">8901 Marmora Road<br/>Glasgow, DO4 89GR.<br/><a href="#" className="reveal-inline-block offset-top-22">Get Directions</a></address>
+        <section className="section-sm-top-130 text-center section-bottom-0 section-top-52">
+          <div className="shell-fluid inset-left-0 inset-right-0">
+            <h2 className="divider">Gallery</h2>
+            
+            <div data-photo-swipe-gallery="gallery" className="range range-condensed">
+              <div className="cell-xs-4 overflow-hidden"><a data-photo-swipe-item="" data-size="684x693" href="images/index-14-684x693_original.jpg" className="img-link img-link-2">
+              <img width="684" height="693" src={imageGallery1} alt=""/></a><a data-photo-swipe-item="" data-size="684x1087" href="images/index-17-684x1087_original.jpg" className="img-link img-link-2">
+              <img width="684" height="1087" src={imageGallery2} alt=""/></a></div>
+              <div className="cell-xs-4 overflow-hidden margin-xs-top-1"><a data-photo-swipe-item="" data-size="684x916" href="images/index-15-684x916_original.jpg" className="img-link img-link-2">
+              <img width="684" height="916" src={imageGallery3} alt=""/></a><a data-photo-swipe-item="" data-size="684x864" href="images/index-18-684x864_original.jpg" className="img-link img-link-2">
+              <img width="684" height="864" src={imageGallery4} alt=""/></a></div>
+              <div className="cell-xs-4 overflow-hidden margin-xs-top-1"><a data-photo-swipe-item="" data-size="684x730" href="images/index-16-684x730_original.jpg" className="img-link img-link-2">
+              <img width="684" height="730" src={imageGallery5} alt=""/></a><a data-photo-swipe-item="" data-size="684x1050" href="images/index-19-684x1050_original.jpg" className="img-link img-link-2">
+              <img width="684" height="1050" src={imageGallery6} alt=""/></a></div>
             </div>
           </div>
         </section>

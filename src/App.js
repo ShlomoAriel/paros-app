@@ -1,5 +1,6 @@
 import React, { Component, PropTypes} from 'react';
 import Header from './components/common/Header'
+import Footer from './components/common/Footer'
 // import logo from './logo.svg';
 import './App.css';
 import image1 from '../public/template/images/slider-1-2050x1040.jpg';
@@ -12,6 +13,7 @@ class App extends Component {
         <div className="page">
           <Header/>
           {this.props.children}
+          <Footer/>
         </div>
     );
   }
