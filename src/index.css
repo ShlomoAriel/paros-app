@@ -3,3 +3,19 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+.rd-navbar-static .rd-navbar-nav > li > a.active, .rd-navbar-fullwidth .rd-navbar-nav > li > a.active,
+.rd-navbar-static .rd-navbar-nav > li.focus, .rd-navbar-static .rd-navbar-nav > li:hover, .rd-navbar-fullwidth .rd-navbar-nav > li.focus, .rd-navbar-fullwidth .rd-navbar-nav > li:hover{
+	color: #41CDCF;
+    background: #fff;
+}
+.rd-navbar-static.rd-navbar--is-stuck,
+.rd-navbar-static.rd-navbar--is-clone,
+.rd-navbar-fullwidth.rd-navbar--is-stuck,
+.rd-navbar-fullwidth.rd-navbar--is-clone,
+.rd-navbar-static .rd-navbar-inner-wrap,
+.rd-navbar-fullwidth .rd-navbar-inner-wrap{
+	background: #41CDCF;
+}
+.rd-navbar-static .rd-navbar-nav > li.focus > a, .rd-navbar-static .rd-navbar-nav > li:hover > a, .rd-navbar-fullwidth .rd-navbar-nav > li.focus > a, .rd-navbar-fullwidth .rd-navbar-nav > li:hover > a{
+	color:#41CDCF;
+}
