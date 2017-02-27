@@ -1,13 +1,13 @@
 import React, { Component} from 'react';
 import {Link, IndexLink} from 'react-router';
-import image1 from '../../../public/template/images/slider-1-2050x1040.jpg';
+import image1 from '../../../public/template/images/8.png';
 import image2 from '../../../public/template/images/index-2-370x262.jpg';
 import image3 from '../../../public/template/images/index-3-370x262.jpg';
 
 class Header extends Component {
   render() {
     return (
-          <header className="page-head bg-lighter header-2 text-center">
+          <header className="page-head bg-lighter header-2 text-center" style={{backgroundImage:"url("+image1+")"}}>
         <ul className="list-inline">
           <li><a href="#">twitter</a></li>
           <li><a href="#">facebook</a></li>
