@@ -6,6 +6,7 @@ import AboutPage from './components/about/AboutPage';
 import ContactPage from './components/contact/ContactPage';
 import PackagePage from './components/package/PackagePage';
 import GalleryPage from './components/gallery/ImageGallery';
+import Admin from './components/admin/container/AdminComponent';
 // import CoursesPage from './components/course/CoursesPage';
 // import ManageCoursePage from './components/course/ManageCoursePage'; //eslint-disable-line import/no-named-as-default
 
@@ -16,5 +17,6 @@ export default (
     <Route path="/contact" component={ContactPage} />
     <Route path="/gallery" component={GalleryPage} />
     <Route path="/package" component={PackagePage} />
+    <Route path="/admin" component={Admin} />
   </Route>
 );

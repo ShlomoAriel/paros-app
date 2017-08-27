@@ -26,7 +26,7 @@ class HomePage extends React.Component{
 			
 	        <main className="page-content">
         
-        <section className="section-sm-top-133 text-center section-md-bottom-153">
+        <section className="section-sm-top-133 text-center">
           <div className="shell">
             <h2 className="divider">ברוכים הבאים</h2>
             <div className="range">
@@ -41,41 +41,18 @@ class HomePage extends React.Component{
           </div>
         </section>
         
-        <section className="text-center">
-          <div className="shell-fluid inset-left-0 inset-right-0">
-            <div className="range range-condensed txt-white">
-              <div className="cell-sm-6 bg-primary">
-                <figure className="figure">
-                <img src={image7} alt="" width="1025" height="639"/>
-                  <figcaption className="figure-caption">
-                    <h5 className="tt-u">How can we help you?</h5>
-                    <h5>Whether searching for your dream home, apartment hunting, relocating, or in need of corporate housing, we can help. Our unique approach combines a diverse selection of properties and housing solutions with the friendly professional service we're known for.</h5>
-                  </figcaption>
-                </figure>
-              </div>
-              <div className="cell-sm-6 bg-starship">
-                <figure className="figure">
-                <img src={image8} alt="" width="1025" height="639"/>
-                  <figcaption className="figure-caption">
-                    <h5 className="tt-u">Sell My Home</h5>
-                    <h5>Selling your home in USA is easy when you let us do all the work. Our real estate brokers will promote your home or condo with a comprehensive marketing program and<br className="veil reveal-sm-inline"/> responsive service.</h5>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-          </div>
-        </section>
-        
         <section className="section-md-top-150 text-center section-md-bottom-31 section-52">
           <div className="shell-fluid inset-left-0 inset-right-0">
-            <h2 className="divider">מוצרים</h2>
+            {
+              // <h2 className="divider">מוצרים</h2>
+            }
             <div className="range range-condensed">
               <div className="cell-xs-6 cell-md-3 cell-xs-push-1 cell-md-push-1">
                 <div className="thumbnail-variant-1"><a href="#" className="img-link">
                 <img src={image9} alt="" width="514" height="550"/></a>
                   <div className="caption">
-                    <div className="h5 tt-u"><a href="#">Vacation Rentals</a></div>
-                    <p>Furnished rentals, located in every area of the city, are a comfortable alternative to staying at hotel.</p><a href="#" className="btn-link">Learn more</a>
+                    <div className="h5 tt-u"><a href="#">יוגה</a></div>
+                    <p>תרגול יוגה הוא תרגול המבוסס בעיקר על תרגול פיזי הפועל על כמה רמות, ברמה הפיזית, ברמה האנרגטית</p><a href="#" className="btn-link">Learn more</a>
                   </div>
                 </div>
               </div>
@@ -83,25 +60,25 @@ class HomePage extends React.Component{
                 <div className="thumbnail-variant-1"><a href="#" className="img-link">
                 <img src={image10} alt="" width="514" height="670"/></a>
                   <div className="caption">
-                    <div className="h5 tt-u"><a href="#">Roommate Share</a></div>
+                    <div className="h5 tt-u"><a href="#">אוכל</a></div>
                     <p>Furnished apartments throughout the city, equipped with various amenities, such as internet and a full kitchen.</p><a href="#" className="btn-link">Learn more</a>
                   </div>
                 </div>
               </div>
               <div className="cell-xs-6 cell-md-3 cell-xs-push-2 cell-md-push-3 offset-top-30 offset-xs-top-0">
                 <div className="thumbnail-variant-1"><a href="#" className="img-link">
-                <img src={image11} alt="" width="514" height="550"/></a>
+                <img src={image12} alt="" width="514" height="550"/></a>
                   <div className="caption">
-                    <div className="h5 tt-u"><a href="#">Corporate Apartments</a></div>
+                    <div className="h5 tt-u"><a href="#">Nature</a></div>
                     <p>Long and short term furnished and unfurnished properties, equipped to provide your client with privacy and comfort.</p><a href="#" className="btn-link">Learn more</a>
                   </div>
                 </div>
               </div>
               <div className="cell-xs-6 cell-md-3 cell-xs-push-4 cell-md-push-4 offset-top-30 offset-xs-top-0">
                 <div className="thumbnail-variant-1"><a href="#" className="img-link">
-                <img src={image12} alt="" width="514" height="730"/></a>
+                <img src={image11} alt="" width="514" height="730"/></a>
                   <div className="caption">
-                    <div className="h5 tt-u"><a href="#">Unfurnished</a></div>
+                    <div className="h5 tt-u"><a href="#">More</a></div>
                     <p>Our variety of unfurnished apartments will provide you with a place to create the perfect personalized home.</p><a href="#" className="btn-link">Learn more</a>
                   </div>
                 </div>
@@ -139,6 +116,23 @@ class HomePage extends React.Component{
                   </div>
                 </div>
               </div>
+              <div className="cell-sm-4 overflow-hidden">
+                <div className="thumbnail">
+                <img src={image6} alt="" width="683" height="482"/>
+                  <div className="caption"><a href="blog-post.html" className="h5">Richmond</a>
+                    <div className="small">Unfurnished Richmond</div>
+                  </div>
+                </div>
+              </div>
+              <div className="cell-sm-4 overflow-hidden">
+                <div className="thumbnail">
+                <img src={image6} alt="" width="683" height="482"/>
+                  <div className="caption"><a href="blog-post.html" className="h5">Richmond</a>
+                    <div className="small">Unfurnished Richmond</div>
+                  </div>
+                </div>
+              </div>
+
             </div>
             </div>
             </div>
