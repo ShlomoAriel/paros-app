@@ -31,7 +31,7 @@ class Footer extends Component {
               <address className="address">8901 Marmora Road<br/>Glasgow, DO4 89GR.<br/><a href="#" className="reveal-inline-block offset-top-22">Get Directions</a></address>
             </div>
           </div>
-          <p className="offset-top-70">Apartments &#169; <span id="copyright-year"></span> <span>&#8226;</span> <a href="privacy.html" className="txt-base">Privacy Policy</a>
+          <p className="offset-top-70">Sea Lion &#169; <span id="copyright-year"></span> <span>&#8226;</span> <a href="privacy.html" className="txt-base">Privacy Policy</a>
           </p>
         </div>
       </footer>

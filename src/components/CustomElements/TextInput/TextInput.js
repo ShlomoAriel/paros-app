@@ -1,31 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const TextInput = ({ field, label, onUpdate, onSelect, placeholder, value, onKeyDownEnter, type, className }) => {
+const TextInput = ({ field, label, onUpdate, onSelect, placeholder, value, onKeyDownEnter, type, fieldClass }) => {
 
-    function onKeyPress(event) {
-        if(event.key == 'Enter'){
-            onSelect(field, event.target.value )
-            onKeyDownEnter();
-        }
-    }
+    // function onKeyPress(event) {
+    //     if(event.key == 'Enter'){
+    //         onSelect(field, event.target.value )
+    //         onKeyDownEnter();
+    //     }
+    // }
 
     return (
-        <div>
-            { label && <label htmlFor={field} className="label">{label}</label> }
-            <div className={className}>
+           
                 <input
-                    className={className}
+                   className={fieldClass}
                     type={type}
                     name={field}
                     placeholder={placeholder}
                     value={value}
                     // onBlur={ event => { event.target.value != '' ? onSelect(field, event.target.value ) : null }}
                     onChange={ event => onUpdate(field, event.target.value) }
-                    onKeyPress={onKeyPress}
+                    // onKeyPress={onKeyPress}
                 />
-            </div>
-        </div>
     );
     
 }
