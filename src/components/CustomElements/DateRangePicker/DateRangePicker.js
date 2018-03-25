@@ -1,16 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DatePicker from 'react-datepicker'
-
-const DateRangePicker = ({ field, label, onUpdate, placeholder, fromValue, toValue }) => {
+import 'react-datepicker/dist/react-datepicker.css';
+import './style.css'
+const DateRangePicker = ({ field, label, onUpdate, endName, startName, placeholder, fromValue, toValue }) => {
 
     function buildDateRange(range, date){
-        if(range == 'from' && date > toValue)
-            onUpdate(field + '_to', date, 'date-range')
-        else if(range == 'to' && date < fromValue)
-                onUpdate(field + '_from', date, 'date-range')
-
-        onUpdate(field + '_' + range, date, 'date-range')
+        if(range == startName && (date <= toValue || !toValue)){
+            onUpdate(startName,date)
+        }
+        else if(range == endName && (date >= fromValue || !fromValue)){
+            onUpdate(endName, date)
+        }
     }
 
     return(
@@ -23,7 +24,7 @@ const DateRangePicker = ({ field, label, onUpdate, placeholder, fromValue, toVal
                     dateFormat="DD-MMM-YYYY"
                     name={field}
                     selected={fromValue}
-                    onChange={ date => buildDateRange('from', date) }/>
+                    onChange={ date => buildDateRange(startName, date) }/>
 
                 <div className="date-range-picker__label">To</div>
                 <DatePicker
@@ -31,7 +32,7 @@ const DateRangePicker = ({ field, label, onUpdate, placeholder, fromValue, toVal
                     dateFormat="DD-MMM-YYYY"
                     name={'To'}
                     selected={toValue}
-                    onChange={ date => buildDateRange('to', date) }/>
+                    onChange={ date => buildDateRange(endName, date) }/>
                     
             </div>
         </div>

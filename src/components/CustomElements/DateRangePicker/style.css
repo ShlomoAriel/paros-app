@@ -1,0 +1,11 @@
+.date-range-picker {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.date-range-picker input{
+	padding: 12px 63px;
+}
+.date-range-picker >div {
+	margin: 0 10px;
+}

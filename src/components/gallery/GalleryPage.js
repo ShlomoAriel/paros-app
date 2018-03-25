@@ -12,6 +12,7 @@ import image9 from '../../../public/template/images/gallery_justified-9.jpg';
 
 class GalleryPage extends React.Component{
   render(){
+    let images= [image1, image2, image3, image4, image5, image6, image7, image8, image9]
     return(
       <main className="page-content">
       <section className="section-sm-top-133 text-center section-top-31">
@@ -46,7 +47,7 @@ class GalleryPage extends React.Component{
                         <div className="img-link-3 img-link-4">
                           <div className="icons-block"><a data-photo-swipe-item="" data-size="684x482" href="images/gallery-1_original.jpg" className="material-icons-control_point"></a><a href="image-format.html" className="material-icons-reply"></a></div>
                           <div className="h5 tt-u"><a href="image-format.html">Image Format</a></div>
-                          <img src={image1} alt="" width="684" height="693"/>
+                          <img src={images[0]} alt="" width="684" height="693"/>
                         </div>
                       </div>
                     </div>
@@ -55,7 +56,7 @@ class GalleryPage extends React.Component{
                         
                         <div className="img-link-3 img-link-4">
                           <div className="icons-block"><a data-photo-swipe-item="" data-size="1170x780" href="images/gallery-2_original.jpg" className="material-icons-control_point"></a><a href="gallery-format.html" className="material-icons-reply"></a></div>
-                          <div className="h5 tt-u"><a href="gallery-format.html">Gallery Format</a></div><img src={image2} alt="" width="684" height="693"/>
+                          <div className="h5 tt-u"><a href="gallery-format.html">Gallery Format</a></div><img src={images[1]} alt="" width="684" height="693"/>
                         </div>
                       </div>
                     </div>
@@ -64,7 +65,7 @@ class GalleryPage extends React.Component{
                         
                         <div className="img-link-3 img-link-4">
                           <div className="icons-block"><a data-photo-swipe-item="" data-size="1170x780" href="images/gallery-3_original.jpg" className="material-icons-control_point"></a><a href="video-format.html" className="material-icons-reply"></a></div>
-                          <div className="h5 tt-u"><a href="video-format.html">Video Format</a></div><img src={image3} alt="" width="684" height="693"/>
+                          <div className="h5 tt-u"><a href="video-format.html">Video Format</a></div><img src={images[2]} alt="" width="684" height="693"/>
                         </div>
                       </div>
                     </div>
@@ -73,7 +74,7 @@ class GalleryPage extends React.Component{
                         
                         <div className="img-link-3 img-link-4">
                           <div className="icons-block"><a data-photo-swipe-item="" data-size="1170x780" href="images/gallery-4_original.jpg" className="material-icons-control_point"></a><a href="audio-format.html" className="material-icons-reply"></a></div>
-                          <div className="h5 tt-u"><a href="audio-format.html">Audio format</a></div><img src={image4} alt="" width="684" height="693"/>
+                          <div className="h5 tt-u"><a href="audio-format.html">Audio format</a></div><img src={images[3]} alt="" width="684" height="693"/>
                         </div>
                       </div>
                     </div>
@@ -82,7 +83,7 @@ class GalleryPage extends React.Component{
                         
                         <div className="img-link-3 img-link-4">
                           <div className="icons-block"><a data-photo-swipe-item="" data-size="683x780" href="images/gallery-5_original.jpg" className="material-icons-control_point"></a><a href="choice.html" className="material-icons-reply"></a></div>
-                          <div className="h5 tt-u"><a href="choice.html">your choice</a></div><img src={image5} alt="" width="684" height="693"/>
+                          <div className="h5 tt-u"><a href="choice.html">your choice</a></div><img src={images[4]} alt="" width="684" height="693"/>
                         </div>
                       </div>
                     </div>
@@ -91,7 +92,7 @@ class GalleryPage extends React.Component{
                         
                         <div className="img-link-3 img-link-4">
                           <div className="icons-block"><a data-photo-swipe-item="" data-size="684x730" href="images/gallery-6_original.jpg" className="material-icons-control_point"></a><a href="choice.html" className="material-icons-reply"></a></div>
-                          <div className="h5 tt-u"><a href="choice.html">your choice</a></div><img src={image6} alt="" width="684" height="693"/>
+                          <div className="h5 tt-u"><a href="choice.html">your choice</a></div><img src={images[5]} alt="" width="684" height="693"/>
                         </div>
                       </div>
                     </div>
@@ -100,7 +101,7 @@ class GalleryPage extends React.Component{
                         
                         <div className="img-link-3 img-link-4">
                           <div className="icons-block"><a data-photo-swipe-item="" data-size="684x1024" href="images/gallery-8_original.jpg" className="material-icons-control_point"></a><a href="choice.html" className="material-icons-reply"></a></div>
-                          <div className="h5 tt-u"><a href="choice.html">your choice</a></div><img src={image7} alt="" width="684" height="693"/>
+                          <div className="h5 tt-u"><a href="choice.html">your choice</a></div><img src={images[6]} alt="" width="684" height="693"/>
                         </div>
                       </div>
                     </div>
@@ -109,7 +110,7 @@ class GalleryPage extends React.Component{
                         
                         <div className="img-link-3 img-link-4">
                           <div className="icons-block"><a data-photo-swipe-item="" data-size="684x780" href="images/gallery-7_original.jpg" className="material-icons-control_point"></a><a href="choice.html" className="material-icons-reply"></a></div>
-                          <div className="h5 tt-u"><a href="choice.html">your choice</a></div><img src={image8} alt="" width="684" height="693"/>
+                          <div className="h5 tt-u"><a href="choice.html">your choice</a></div><img src={images[7]} alt="" width="684" height="693"/>
                         </div>
                       </div>
                     </div>
@@ -118,7 +119,7 @@ class GalleryPage extends React.Component{
                         
                         <div className="img-link-3 img-link-4">
                           <div className="icons-block"><a data-photo-swipe-item="" data-size="1024x780" href="images/gallery-9_original.jpg" className="material-icons-control_point"></a><a href="choice.html" className="material-icons-reply"></a></div>
-                          <div className="h5 tt-u"><a href="choice.html">your choice</a></div><img src={image9} alt="" width="684" height="693"/>
+                          <div className="h5 tt-u"><a href="choice.html">your choice</a></div><img src={images[8]} alt="" width="684" height="693"/>
                         </div>
                       </div>
                     </div>

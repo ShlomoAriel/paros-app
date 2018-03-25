@@ -1,0 +1,53 @@
+body{
+}
+.form-control{
+	padding: 12px 63px;
+}
+.admin .list-inline a, .admin .list-inline li:before{
+	color: #66819E;
+}
+.admin .shell h3{
+	border-top:1px solid #e8e9e9;
+	margin-top:30px;
+}
+.list-inline li{
+    position: relative;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.isotope-item{
+	margin-top:10px;
+}
+.flex-row{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: ;
+	align-items: center;
+	align-content: stretch;
+}
+.product-item{
+	cursor: pointer;
+    margin-bottom: 5px;
+    padding: 10px 12px;
+	background: rgba(50, 175, 247, 0.1);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.175);
+}
+.product-item div{
+    margin-left: 10px;
+}
+.product-items .active input{
+	background: rgba(50, 175, 247, 1);
+}
+.product-items input{
+	width:18px;
+	height:18px;
+	margin: 0;
+	border-radius: 100%;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.175);
+}
+.image-gallery-slides{
+	height: 650px;
+}

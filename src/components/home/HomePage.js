@@ -19,9 +19,7 @@ import imageGallery4 from '../../../public/template/images/index-18-684x864.jpg'
 import imageGallery5 from '../../../public/template/images/index-16-684x730.jpg';
 import imageGallery6 from '../../../public/template/images/index-19-684x1050.jpg';
 
-
-class HomePage extends React.Component{
-	render(){
+const HomePage = ({packages})=> {
 		return(
 			
 	        <main className="page-content">
@@ -92,6 +90,17 @@ class HomePage extends React.Component{
             <div className="range range-condensed">
           <div className="shell-fluid inset-left-0 inset-right-0">
             <div className="range range-condensed">
+            {
+              packages.map(packageContent =>
+              <div className="cell-sm-4 overflow-hidden">
+                <div className="thumbnail">
+                  <img src={image4} alt="" width="683" height="482"/>
+                  <div className="caption"><a href="blog-post.html" className="h5">{packageContent.name}</a>
+                    <div className="small">...</div>
+                  </div>
+                </div>
+              </div>)
+          }
               <div className="cell-sm-4 overflow-hidden">
                 <div className="thumbnail">
                   <img src={image4} alt="" width="683" height="482"/>
@@ -158,6 +167,5 @@ class HomePage extends React.Component{
       </main>
 			);
 	}
-}
 
 export default HomePage;

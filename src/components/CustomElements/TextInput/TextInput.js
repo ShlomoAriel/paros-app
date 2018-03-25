@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const TextInput = ({ field, label, onUpdate, onSelect, placeholder, value, onKeyDownEnter, type, fieldClass }) => {
+const TextInput = ({ name, section, label, onUpdate, onSelect, placeholder, value, onKeyDownEnter, type, fieldClass }) => {
 
     // function onKeyPress(event) {
     //     if(event.key == 'Enter'){
@@ -15,11 +15,11 @@ const TextInput = ({ field, label, onUpdate, onSelect, placeholder, value, onKey
                 <input
                    className={fieldClass}
                     type={type}
-                    name={field}
+                    name={name}
                     placeholder={placeholder}
                     value={value}
                     // onBlur={ event => { event.target.value != '' ? onSelect(field, event.target.value ) : null }}
-                    onChange={ event => onUpdate(field, event.target.value) }
+                    onChange={ event => onUpdate(name, event.target.value, section) }
                     // onKeyPress={onKeyPress}
                 />
     );

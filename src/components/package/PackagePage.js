@@ -12,7 +12,7 @@ import image8 from '../../../public/template/images/gallery_list-8.jpg';
 import image9 from '../../../public/template/images/gallery_list-9.jpg';
 
 
-class ContactPage extends React.Component{
+class PackagePage extends React.Component{
   render(){
     return(
       <main className="page-content">
@@ -158,4 +158,4 @@ class ContactPage extends React.Component{
   }
 }
 
-export default ContactPage;
+export default PackagePage;

@@ -4,24 +4,32 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {hashHistory} from 'react-router'
 import Admin from '../display/Admin'
-import * as adminActions from '../../../actions/adminActions'
+import * as adminActions from '../../../redux/actions/adminActions'
+import * as contentActions from '../../../redux/actions/contentActions'
 
 function mapStateToProps(state) {
-    let content = state.admin[state.admin.selectedLanguage].homeContent 
-        ? state.admin[state.admin.selectedLanguage].homeContent
-        : state.admin['english'].homeContent
+    let content = state.content[state.content.selectedLanguage].home 
+        ? state.content[state.content.selectedLanguage].home
+        : state.content['english'].home
+    let about = state.content[state.content.selectedLanguage].about 
+        ? state.content[state.content.selectedLanguage].about
+        : state.content['english'].about
     return {
-        homeContent:content
+        home:content,
+        about:about
     }
 }
 
 function mapDispatchToProps(dispatch) {
     return {
-    	onInputChange(field, value){
-            dispatch( adminActions.onInputChange(field, value) )
+    	onInputChange(field, value, section){
+            dispatch( contentActions.onInputChange(section, field, value) )
         },
         setLanguage(language){
-            dispatch( adminActions.setLanguage(language) )
+            dispatch( contentActions.setLanguage(language) )
+        },
+        save(section, name, content, _id){
+            dispatch( contentActions.saveContentToServer(section, name, content, _id) )
         },
     }
 }
@@ -32,4 +40,3 @@ const AdminComponent = connect( mapStateToProps, mapDispatchToProps )(Admin)
 // }
 
 export default AdminComponent
-

@@ -2,6 +2,17 @@ import React from 'react';
 import {Link} from 'react-router';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
+
+import image1 from '../../../public/template/images/gallery_justified-1.jpg';
+import image2 from '../../../public/template/images/gallery_justified-2.jpg';
+import image3 from '../../../public/template/images/gallery_justified-3.jpg';
+import image4 from '../../../public/template/images/gallery_justified-4.jpg';
+import image5 from '../../../public/template/images/gallery_justified-5.jpg';
+import image6 from '../../../public/template/images/gallery_justified-6.jpg';
+import image7 from '../../../public/template/images/gallery_justified-7.jpg';
+import image8 from '../../../public/template/images/gallery_justified-8.jpg';
+import image9 from '../../../public/template/images/gallery_justified-9.jpg';
+
 class ImageGallery2 extends React.Component {
 
   handleImageLoad(event) {
@@ -10,39 +21,59 @@ class ImageGallery2 extends React.Component {
 
   render() {
 
-    const images = [
-      {
-        original: 'http://lorempixel.com/1000/600/nature/1/',
-        thumbnail: 'http://lorempixel.com/250/150/nature/1/',
-      },
-      {
-        original: 'http://lorempixel.com/1000/600/nature/2/',
-        thumbnail: 'http://lorempixel.com/250/150/nature/2/'
-      },
-      {
-        original: 'http://lorempixel.com/1000/600/nature/3/',
-        thumbnail: 'http://lorempixel.com/250/150/nature/3/'
-      }
-    ]
+    // const images = [
+    //   {
+    //     original: 'http://lorempixel.com/1000/600/nature/1/',
+    //     thumbnail: 'http://lorempixel.com/250/150/nature/1/',
+    //   },
+    //   {
+    //     original: 'http://lorempixel.com/1000/600/nature/2/',
+    //     thumbnail: 'http://lorempixel.com/250/150/nature/2/'
+    //   },
+    //   {
+    //     original: 'http://lorempixel.com/1000/600/nature/3/',
+    //     thumbnail: 'http://lorempixel.com/250/150/nature/3/'
+    //   }
+    // ]
+    // const images = [
+    //   {original:image1, thumbnail:image1}, 
+    //   {original:image2, thumbnail:image2}, 
+    //   {original:image3, thumbnail:image3}, 
+    //   {original:image4, thumbnail:image4}, 
+    //   {original:image5, thumbnail:image5}, 
+    //   {original:image6, thumbnail:image6}, 
+    //   {original:image7, thumbnail:image7}, 
+    //   {original:image8, thumbnail:image8}, 
+    //   {original:image9, thumbnail:image9}
+    // ]
 
+    function importAll(r) {
+      return r.keys().map(r)
+    }
+    let images = importAll(require.context('../../../public/template/images/img', false, /\.(png|jpe?g|svg)$/));
+    images = images.map(image=>{
+      return { original:image, thumbnail:image, name: image.substr(image.lastIndexOf('/') + 1 )}
+    })
     return (
       <main className="page-content">
-      <section className="section-sm-top-133 text-center section-top-31">
-          <div className="shell text-center">
-            <h5 className="tt-u">Gallery</h5>
-            <ol className="breadcrumb">
-              <li><Link to="/" activeClassName="active">Home</Link></li>
-              <li>About</li>
-            </ol>
-          </div>
-        </section>
+      {
+        // <section className="section-sm-top-133 text-center section-top-31">
+        //         <div className="shell text-center">
+        //           <h5 className="tt-u">Gallery</h5>
+        //           <ol className="breadcrumb">
+        //             <li><Link to="/" activeClassName="active">Home</Link></li>
+        //             <li>About</li>
+        //           </ol>
+        //         </div>
+        //       </section>
+            }
         <section className="section-sm-top-133 border-bottom container">
           <div className="shell-fluid inset-left-0 inset-right-0">
             <h2 className="divider text-center">Gallery</h2>
             <div className="range range-condensed" id="range-fix">
               <ImageGallery
                 items={images}
-                sizes={0.2}
+                sizes={0.2} 
                 slideInterval={2000}
                 onImageLoad={this.handleImageLoad}/>
                 </div>

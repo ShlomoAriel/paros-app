@@ -1,0 +1,19 @@
+body{
+}
+@import '~react-big-calendar/lib/css/react-big-calendar.css';
+@import "./components/main.css";
+.form-control{
+	padding: 12px 63px;
+}
+.rbc-calendar{
+	height: 519px;
+    z-index: 100;
+    margin-top: 130px;
+}
+.admin{
+	.shell{
+		h3{
+			border-top:1px solid red;
+		}
+	}
+}
