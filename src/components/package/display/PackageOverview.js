@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types'
 import React  from 'react'
 import {Link} from 'react-router'
-import image1 from 'images/gallery_list-1.jpg';
+import image1 from '../../../images/gallery_list-1.jpg';
 import image2 from '../../../../public/template/images/gallery_list-2.jpg';
 import image3 from '../../../../public/template/images/gallery_list-3.jpg';
 import image4 from '../../../../public/template/images/gallery_list-4.jpg';
@@ -38,7 +38,7 @@ const PackageOverview = ({packages})=> {
 
 	                      	}
 	                      	<Link to={"/package/" + item._id} className="img-link-2 img-link-4 img-link-4-mod-1 media-left">
-	                      		<img src={item.image ? require('images/'+item.image): image1} alt="" width="684" height="693"/>
+	                      		<img src={item.image ? item.image: image1} alt="" width="684" height="693"/>
 	                      	</Link>
 	                        <div className="caption media-body">
 	                          <Link className="h5 tt-u" to={"package/"+(item._id)}>{item.name}</Link>

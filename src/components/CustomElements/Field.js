@@ -5,7 +5,7 @@ import React from 'react'
 import TextInput from './TextInput/TextInput'
 // import Checkbox from './field/Checkbox'
 import DateRangePicker from './DateRangePicker/DateRangePicker'
-import TextAreaInput from 'components/CustomElements/TextAreaInput/TextAreaInput'
+import TextAreaInput from './TextAreaInput/TextAreaInput'
 
 // import DateTime from './field/DateTime'
 // import NumberRange from './field/NumberRange'

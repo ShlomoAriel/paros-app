@@ -3,7 +3,7 @@ var remoteUrl = "https://paros-sever.herokuapp.com"
 var currentUrl = localUrl   
 
 import * as types from './actionTypes'
-import * as http from 'utils/axiosWrapper'
+import * as http from '../../utils/axiosWrapper'
 import axios from 'axios'
 import R from 'ramda'
 export function onInputChange(section, field, value){

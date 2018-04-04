@@ -13,11 +13,11 @@ class PackageFormComponent extends React.Component {
     constructor(props) {
         super(props)
         this.updateField = this.updateField.bind(this)
+        this.toggleModal = this.toggleModal.bind(this)
     }
 
     state = {
-        form:{
-        },
+        isModalOpen:false
     }
 
     componentWillMount() {
@@ -29,9 +29,10 @@ class PackageFormComponent extends React.Component {
             form.end = moment(form.end)
         }
         this.state.form = this.props.form
-
     }
-
+    toggleModal(){
+        this.setState({isModalOpen:!this.state.isModalOpen})
+    }
     updateField(name, value) {
         let form = {...this.state.form}
         form[name] = value
@@ -56,6 +57,7 @@ class PackageFormComponent extends React.Component {
                 {...this.state}
                 fields={this.getFields()}
                 updateField={this.updateField}
+                toggleModal={this.toggleModal}
             />
         )
     }

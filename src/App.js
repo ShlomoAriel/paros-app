@@ -2,8 +2,8 @@ import React, { Component, PropTypes} from 'react';
 import {connect} from 'react-redux'
 import HeaderComponent from './components/common/container/HeaderComponent'
 import Footer from './components/common/Footer'
-import * as contentActions from 'redux/actions/contentActions'
-import * as packageActions from 'redux/actions/packageActions'
+import * as contentActions from './redux/actions/contentActions'
+import * as packageActions from './redux/actions/packageActions'
 import GalleryPage from './components/gallery/ImageGallery';
 // import logo from './logo.svg';
 import './App.css';

@@ -1,5 +1,5 @@
 import React from 'react';
-import Field from 'components/CustomElements/Field'
+import Field from '../../../components/CustomElements/Field'
 
 const Login = ({addUser, updateField,userForm, email, password, authenticated, onInputFieldChange, login}) => {
     const emailInput = { fieldClass:'form-control',field: 'email', name:'email', placeholder: 'email', value: email, onUpdate: onInputFieldChange }

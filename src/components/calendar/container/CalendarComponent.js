@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux';
 import R from 'ramda';
 import Calendar from '../display/Calendar';
-import * as calendarActions from 'redux/actions/calendarActions'
+import * as calendarActions from '../../../redux/actions/calendarActions'
 import moment from 'moment';
 
 class CalendarComponent extends React.Component {

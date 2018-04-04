@@ -13,14 +13,14 @@ export default function packageReducer(state = initialState, action){
 			let newState = packageUtils.editPackage(state, action.field, action.value, action.id)
 			return newState
 		case types.ADD_PACKAGE:
-			let list = R.clone(state.list)
+			let packageList = R.clone(state.packageList)
 			if(action.item.id){
-				let foundIndex = list.findIndex( listItem => listItem.id === action.item.id)
-				list[foundIndex] = action.item;
+				let foundIndex = packageList.findIndex( packageListItem => packageListItem.id === action.item.id)
+				packageList[foundIndex] = action.item;
 			} else{
-				list.push(action.item)
+				packageList.push(action.item)
 			}
-			return {...state.list, list: list}
+			return {...state.packageList, packageList: packageList}
 		case types.TOGGLE_SELECTED_PRODUCT:
 			let newList = packageUtils.toggleListById(state.list, action.packageId, action.productId)
 			return R.assoc('list', newList, state)

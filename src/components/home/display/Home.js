@@ -6,6 +6,7 @@ import TextInput from '../../../components/CustomElements/TextInput/TextInput'
 import TextAreaInput from '../../../components/CustomElements/TextAreaInput/TextAreaInput'
 
 
+import image1 from '../../../images/img/gallery_justified-3.jpg';
 import image10 from '../../../../public/template/images/7.png';
 import image9 from '../../../../public/template/images/4.png';
 import image11 from '../../../../public/template/images/3.png';
@@ -99,13 +100,13 @@ const Admin = ({home, packages})=> {
             <div className="range range-condensed">
               <div className="shell-fluid inset-left-0 inset-right-0">
                 <div className="range range-condensed">
-                {
+                { packages &&
                   packages.map(packageContent =>
                   <div className="cell-sm-4 overflow-hidden">
                     <div className="thumbnail">
-                      <img src={require('images/'+packageContent.image)} alt="" width="683" height="482"/>
+                      <img src={packageContent.image ? packageContent.image : image1} alt="" width="683" height="482"/>
                       <div className="caption">
-                        <Link className="h5 tt-u" to={"package/"+(packageContent.id)}>
+                        <Link className="h5 tt-u" to={"package/"+(packageContent._id)}>
                           {packageContent.name}
                         </Link>
                         <div className="small">...</div>

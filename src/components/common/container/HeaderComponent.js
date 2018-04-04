@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import {hashHistory} from 'react-router'
 import Header from '../display/Header'
-import * as contentActions from 'redux/actions/contentActions'
+import * as contentActions from '../../../redux/actions/contentActions'
 
 function mapStateToProps(state) {
 	let content = state.admin[state.admin.selectedLanguage].home 

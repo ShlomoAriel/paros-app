@@ -2,14 +2,13 @@
 import React  from 'react'
 import Checkbox from '../../../components/CustomElements/Checkbox/Checkbox'
 import {Link} from 'react-router'
-import TextInput from 'components/CustomElements/TextInput/TextInput'
 import R from 'ramda'
 import moment from 'moment'
-import image1 from 'images/gallery_list-1.jpg';
-import DateRangePicker from 'components/CustomElements/DateRangePicker/DateRangePicker'
-import Field from 'components/CustomElements/Field'
+import image1 from '../../../images/gallery_list-1.jpg'
+import Field from '../../../components/CustomElements/Field'
+import ImagePicker from '../../../components/imagePicker/container/ImagePickerComponent'
 
-const PackageForm = ({form,images, fields, onInputChange, addPackage})=> {
+const PackageForm = ({form,images, fields, updateField, addPackage, toggleModal, isModalOpen})=> {
 	return(
     <div>
       <section className="section-md-top-145 section-sm-bottom-153 section-34">
@@ -28,16 +27,14 @@ const PackageForm = ({form,images, fields, onInputChange, addPackage})=> {
                 </div>
               </div>
             )}
-            {images.map(image =>
-               <div className="cell-sm-8" key={image.name}>
+            <div className="cell-sm-8">
                 <div className="form-group">
                   <label htmlFor="contact-email" className="form-label"></label>
                   {
-                    <div className="cell-md-4"><img src= { image.name ? require('images/img' + image.name) : image1} alt="" width="370" height="286"/></div>
+                    <img src={form.image ? form.image : image1} onClick={toggleModal}/>
                   }
                 </div>
               </div>
-            )}
             <div className="cell-sm-8">
               <div className="text-center offset-top-30">
                   <button onClick={()=>addPackage(form)} type="submit" className="btn btn-transparent btn-sm">Add</button>
@@ -46,6 +43,12 @@ const PackageForm = ({form,images, fields, onInputChange, addPackage})=> {
           </div>
         </div>
       </section>
+      { isModalOpen &&
+        <div className="form-modal">
+          <ImagePicker setImage={(field, value)=>{toggleModal(); updateField(field, value)}}/>
+        </div>  
+      }
+      
     </div>
 	)
 }

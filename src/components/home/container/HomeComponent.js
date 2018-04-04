@@ -11,7 +11,7 @@ function mapStateToProps(state) {
         ? state.content[state.content.selectedLanguage].home
         : state.content[state.content.selectedLanguage].home
     return {
-        packages:state.packageState.list,
+        packages:state.packageState.packageList,
     	home: content
     }
 }

@@ -3,7 +3,7 @@ import React  from 'react'
 import Checkbox from '../../../components/CustomElements/Checkbox/Checkbox'
 import {Link} from 'react-router'
 import TextInput from '../../../components/CustomElements/TextInput/TextInput'
-import image1 from 'images/gallery_list-1.jpg';
+import image1 from '../../../images/gallery_list-1.jpg';
 import R from 'ramda'
 import moment from 'moment'
 
@@ -14,7 +14,9 @@ const PackageItem = ({categories, packageContent})=> {
           <div className="shell">
             <h2 className="divider text-center">{packageContent.name}</h2>
             <div className="range">
-              <div className="cell-md-4"><img src= { packageContent.image ? require('images/' + packageContent.image) : image1} alt="" width="370" height="286"/></div>
+              <div className="cell-md-4">
+                <img src= { packageContent.image ? packageContent.image : image1} alt="" width="370" height="286"/>
+              </div>
               <div className="cell-md-8 txt-base">
                 <div className="inset-md-right-30">
                   <div className="h5">{packageContent.description}</div>
@@ -34,6 +36,9 @@ const PackageItem = ({categories, packageContent})=> {
         </section>
         <div className="shell text-center">
           <Link to="/package"><h5 className="tt-u">All Packages</h5></Link>
+        </div>
+        <div className="shell text-center">
+          <Link to={"/packageForm/" +  packageContent._id}><h5 className="tt-u">Edit</h5></Link>
         </div>
     {
      //   <ol className="breadcrumb">

@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux';
 import R from 'ramda';
-import * as loginActions from 'redux/actions/loginActions'
+import * as loginActions from '../../../redux/actions/loginActions'
 // import * as webUIActions from 'redux/actions/webUIActions'
 import Login from '../display/Login';
 
