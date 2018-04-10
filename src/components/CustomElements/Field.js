@@ -6,7 +6,7 @@ import TextInput from './TextInput/TextInput'
 // import Checkbox from './field/Checkbox'
 import DateRangePicker from './DateRangePicker/DateRangePicker'
 import TextAreaInput from './TextAreaInput/TextAreaInput'
-
+import ImagePicker from './imagePicker/container/ImagePickerComponent'
 // import DateTime from './field/DateTime'
 // import NumberRange from './field/NumberRange'
 // import Slider from './field/Slider';
@@ -26,10 +26,12 @@ const Field = ({...props, value, type, fromValue, toValue, onEnter}) => {
         //     return <TextInput {...props} onKeyDownEnter={onEnter}/>;
         // case 'dateTime':
         //     return <DateTime {...props} />;
+        case 'image-picker':
+            return <ImagePicker {...props} />
         case 'date-range':
-            return <DateRangePicker {...props} />;
+            return <DateRangePicker {...props} />
         case 'text-area':
-            return <TextAreaInput {...props} />;
+            return <TextAreaInput {...props} />
         // case 'number-range':
         //     return <NumberRange{...props} />;
         // case 'checkbox':

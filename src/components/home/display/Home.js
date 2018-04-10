@@ -31,7 +31,6 @@ const Admin = ({home, packages})=> {
 
 	return(
 		 <main className="page-content">
-        
         <section className="section-sm-top-133 text-center">
           <div className="shell">
             <h2 className="divider">{home.welcomeTitle.value}</h2>
@@ -53,7 +52,7 @@ const Admin = ({home, packages})=> {
             <div className="range range-condensed">
               <div className="cell-xs-6 cell-md-3 cell-xs-push-1 cell-md-push-1">
                 <div className="thumbnail-variant-1"><a href="#" className="img-link">
-                <img src={image9} alt="" width="514" height="550"/></a>
+                <img src={home.homeAboutYogaImage.value} alt="" width="514" height="550"/></a>
                   <div className="caption">
                     <div className="h5 tt-u"><a href="#">יוגה</a></div>
                     <p>{home.homeAboutYoga.value}</p>
@@ -63,7 +62,7 @@ const Admin = ({home, packages})=> {
               </div>
               <div className="cell-xs-6 cell-md-3 cell-xs-push-3 cell-md-push-2 offset-top-30 offset-xs-top-0">
                 <div className="thumbnail-variant-1"><a href="#" className="img-link">
-                <img src={image10} alt="" width="514" height="670"/></a>
+                <img src={home.homeAboutFoodImage.value} alt="" width="514" height="670"/></a>
                   <div className="caption">
                     <div className="h5 tt-u"><a href="#">אוכל</a></div>
                     <p>{home.homeAboutFood.value}</p>
@@ -73,7 +72,7 @@ const Admin = ({home, packages})=> {
               </div>
               <div className="cell-xs-6 cell-md-3 cell-xs-push-2 cell-md-push-3 offset-top-30 offset-xs-top-0">
                 <div className="thumbnail-variant-1"><a href="#" className="img-link">
-                <img src={image12} alt="" width="514" height="550"/></a>
+                <img src={home.homeAboutNatureImage.value} alt="" width="514" height="550"/></a>
                   <div className="caption">
                     <div className="h5 tt-u"><a href="#">Nature</a></div>
                     <p>{home.homeAboutNature.value}</p>
@@ -83,7 +82,7 @@ const Admin = ({home, packages})=> {
               </div>
               <div className="cell-xs-6 cell-md-3 cell-xs-push-4 cell-md-push-4 offset-top-30 offset-xs-top-0">
                 <div className="thumbnail-variant-1"><a href="#" className="img-link">
-                <img src={image11} alt="" width="514" height="730"/></a>
+                <img src={home.homeAboutMoreImage.value} alt="" width="514" height="730"/></a>
                   <div className="caption">
                     <div className="h5 tt-u"><a href="#">More</a></div>
                     <p>{home.homeAboutMore.value}</p>

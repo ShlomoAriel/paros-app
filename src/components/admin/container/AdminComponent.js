@@ -7,6 +7,30 @@ import Admin from '../display/Admin'
 import * as adminActions from '../../../redux/actions/adminActions'
 import * as contentActions from '../../../redux/actions/contentActions'
 
+class AdminComponent extends React.Component{
+    constructor(props) {
+        super(props)
+        this.setCurrentImageField = this.setCurrentImageField.bind(this)
+    }
+    state={
+        currentImageField: undefined,
+    }
+
+    setCurrentImageField(field){
+        this.setState({currentImageField:field})
+    }
+
+    render() {
+        return (
+            <Admin 
+                {...this.props}
+                {...this.state}
+                setCurrentImageField={this.setCurrentImageField}
+            />
+        )
+    }
+}
+
 function mapStateToProps(state) {
     let content = state.content[state.content.selectedLanguage].home 
         ? state.content[state.content.selectedLanguage].home
@@ -34,9 +58,7 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-const AdminComponent = connect( mapStateToProps, mapDispatchToProps )(Admin)
+export default connect( mapStateToProps, mapDispatchToProps )(AdminComponent)
 
 // AdminComponent.propTypes = {
 // }
-
-export default AdminComponent

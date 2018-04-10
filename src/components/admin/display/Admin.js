@@ -3,9 +3,14 @@ import React  from 'react'
 import {Link} from 'react-router'
 import * as adminActions from '../../../redux/actions/adminActions'
 import Field from '../../../components/CustomElements/Field'
-// import TextAreaInput from '../../../components/CustomElements/TextAreaInput/TextAreaInput'
+import ImagePicker from '../../../components/imagePicker/container/ImagePickerComponent'
+import image1 from '../../../images/gallery_list-1.jpg'
 
-const Admin = ({home, about, onInputChange, setLanguage, save})=> {
+const Admin = ({home, about, onInputChange, setLanguage, save, setCurrentImageField, currentImageField})=> {
+		function importAll(r) {
+	      return r.keys().map(r)
+	    }
+	    let images = importAll(require.context('../../../images/img', false, /\.(png|jpe?g|svg)$/));
     const homeWelcomeTitle = { fieldClass:'form-control', section:'home', field: 'welcomeTitle', name:'welcomeTitle', placeholder: 'Welcome Text', value: home.welcomeTitle.value, onUpdate: onInputChange }
     const homeWelcomeContent = {type:'text-area', fieldClass:'form-control', section:'home',field: 'welcomeText', name:'welcomeText', placeholder: 'Welcome Text', value: home.welcomeText.value, onUpdate: onInputChange }
     const homeAboutCardYoga = {type:'text-area', fieldClass:'form-control', section:'home',field: 'homeAboutYoga', name:'homeAboutYoga', placeholder: '', value: home.homeAboutYoga.value, onUpdate: onInputChange }
@@ -14,9 +19,18 @@ const Admin = ({home, about, onInputChange, setLanguage, save})=> {
     const homeAboutCardMore = {type:'text-area', fieldClass:'form-control', section:'home',field: 'homeAboutMore', name:'homeAboutMore', placeholder: '', value: home.homeAboutMore.value, onUpdate: onInputChange }
     const aboutUsTitle = { fieldClass:'form-control', section:'about',field: 'aboutTitle', name:'aboutTitle', placeholder: '', value: about.aboutTitle.value, onUpdate: onInputChange }
     const aboutUsMainDescription = {type:'text-area', fieldClass:'form-control', section:'about', field: 'mainDescription', name:'mainDescription', placeholder: '', value: about.mainDescription.value, onUpdate: onInputChange }
+    const homeAboutYogaImage = {type:'image-picker', images:images, fieldClass:'form-control', section:'home', field: 'homeAboutYogaImage', name:'homeAboutYogaImage', placeholder: '', value: home.homeAboutYogaImage.value, onUpdate: onInputChange }
+    const homeAboutFoodImage = {type:'image-picker', images:images, fieldClass:'form-control', section:'home', field: 'homeAboutFoodImage', name:'homeAboutFoodImage', placeholder: '', value: home.homeAboutFoodImage.value, onUpdate: onInputChange }
+    const homeAboutNatureImage = {type:'image-picker', images:images, fieldClass:'form-control', section:'home', field: 'homeAboutNatureImage', name:'homeAboutNatureImage', placeholder: '', value: home.homeAboutNatureImage.value, onUpdate: onInputChange }
+    const homeAboutMoreImage = {type:'image-picker', images:images, fieldClass:'form-control', section:'home', field: 'homeAboutMoreImage', name:'homeAboutMoreImage', placeholder: '', value: home.homeAboutMoreImage.value, onUpdate: onInputChange }
 
 	return(
     	<div className="section-sm-top-133 text-center admin">
+			{ currentImageField &&
+				<div className="form-modal">
+					<ImagePicker field={currentImageField} setImage={(field, value)=>{setCurrentImageField(undefined); onInputChange('home',field, value)}}/>
+				</div>
+			}
     		<ul className="list-inline">
 	          <li onClick={()=>setLanguage('hebrew')}><a>עברית</a></li>
 	          <li onClick={()=>setLanguage('english')}><a>English</a></li>
@@ -55,7 +69,14 @@ const Admin = ({home, about, onInputChange, setLanguage, save})=> {
 	                  <div className="button-holder">
 	                  	<button onClick={()=>save(homeAboutCardYoga.section,homeAboutCardYoga.name,homeAboutCardYoga.value, homeAboutCardYoga._id)} className="fa fa-arrow-circle-o-right login-button"></button>
 	                  </div>
+	                  <div className="form-group">
+	    	 			<Field {...homeAboutYogaImage}/>
+	                  </div>
+	                  <div className="button-holder">
+	                  	<button onClick={()=>save(homeAboutYogaImage.section,homeAboutYogaImage.name,homeAboutYogaImage.value, homeAboutYogaImage._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	                  </div>
 	                </div>
+
 	                <div className="cell-sm-4">
 	                  <div className="form-group">
 	                    <label htmlFor="contact-name" className="form-label">אוכל:</label>
@@ -64,7 +85,14 @@ const Admin = ({home, about, onInputChange, setLanguage, save})=> {
 	                  <div className="button-holder">
 	                  	<button onClick={()=>save(homeAboutCardFood.section,homeAboutCardFood.name,homeAboutCardFood.value, homeAboutCardFood._id)} className="fa fa-arrow-circle-o-right login-button"></button>
 	                  </div>
+	                  <div className="form-group">
+	    	 			<Field {...homeAboutFoodImage}/>
+	                  </div>
+	                  <div className="button-holder">
+	                  	<button onClick={()=>save(homeAboutFoodImage.section,homeAboutFoodImage.name,homeAboutFoodImage.value, homeAboutFoodImage._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	                  </div>
 	                </div>
+
 	                <div className="cell-sm-4">
 	                  <div className="form-group">
 	                    <label htmlFor="contact-name" className="form-label">טבע:</label>
@@ -73,7 +101,14 @@ const Admin = ({home, about, onInputChange, setLanguage, save})=> {
 	                  <div className="button-holder">
 	                  	<button onClick={()=>save(homeAboutCardNature.section,homeAboutCardNature.name,homeAboutCardNature.value, homeAboutCardNature._id)} className="fa fa-arrow-circle-o-right login-button"></button>
 	                  </div>
+	                  <div className="form-group">
+	    	 			<Field {...homeAboutNatureImage}/>
+	                  </div>
+	                  <div className="button-holder">
+	                  	<button onClick={()=>save(homeAboutNatureImage.section,homeAboutNatureImage.name,homeAboutNatureImage.value, homeAboutNatureImage._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	                  </div>
 	                </div>
+
 	                <div className="cell-sm-4">
 	                  <div className="form-group">
 	                    <label htmlFor="contact-name" className="form-label">עוד:</label>
@@ -81,6 +116,12 @@ const Admin = ({home, about, onInputChange, setLanguage, save})=> {
 	                  </div>
 	                  <div className="button-holder">
 	                  	<button onClick={()=>save(homeAboutCardMore.section,homeAboutCardMore.name,homeAboutCardMore.value, homeAboutCardMore._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	                  </div>
+	                  <div className="form-group">
+	    	 			<Field {...homeAboutMoreImage}/>
+	                  </div>
+	                  <div className="button-holder">
+	                  	<button onClick={()=>save(homeAboutMoreImage.section,homeAboutMoreImage.name,homeAboutMoreImage.value, homeAboutMoreImage._id)} className="fa fa-arrow-circle-o-right login-button"></button>
 	                  </div>
 	                </div>
 	            </div>

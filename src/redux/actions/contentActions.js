@@ -1,6 +1,6 @@
 var localUrl = "http://localhost:3001"
 var remoteUrl = "https://paros-sever.herokuapp.com"
-var currentUrl = localUrl   
+var currentUrl = remoteUrl   
 
 import * as types from './actionTypes'
 import * as http from '../../utils/axiosWrapper'
