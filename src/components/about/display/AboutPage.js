@@ -18,7 +18,7 @@ const AboutPage = ({about}) => {
           <div className="shell">
             <h2 className="divider text-center">{about.aboutTitle.value}</h2>
             <div className="range">
-              <div className="cell-md-4"><img src="images/about-1-370x286.jpg" alt="" width="370" height="286"/></div>
+              <div className="cell-md-4"><img src={about.aboutImage.value} alt="" width="370" height="286"/></div>
               <div className="cell-md-8 txt-base">
                 <div className="inset-md-right-30">
                   <div className="h5">{about.mainDescription.value}</div>

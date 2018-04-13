@@ -1,7 +1,4 @@
-var localUrl = "http://localhost:3001"
-var remoteUrl = "https://paros-sever.herokuapp.com"
-var currentUrl = remoteUrl   
-
+import * as config from '../../utils/config'
 import * as types from './actionTypes'
 import * as http from '../../utils/axiosWrapper'
 import axios from 'axios'
@@ -28,7 +25,7 @@ export function setContentMap(contentMap){
 
 export function getContentFromServer(){
     return (dispatch, getState) => {
-        return http.get(currentUrl + '/api/getContents')
+        return http.get(config.currentUrl + '/api/getContents')
         .then ( 
             response => {
                 console.log('Success: ' + response)
@@ -54,7 +51,7 @@ export function saveContentToServer(section, name, content, _id){
             dateCreated: Date(),
             dateModified: Date(),
         }
-        return http.put(currentUrl + '/api/upsertContent',contentObject)
+        return http.put(config.currentUrl + '/api/upsertContent',contentObject)
         .then ( 
             response => {
                 // dispatch(getContentFromServer())
@@ -71,7 +68,7 @@ export function saveContentToServer(section, name, content, _id){
 export function updaeContent(id, content){
     return (dispatch, getState) => {
         let form = getState().content.form
-        return http.put(currentUrl + '/api/deleteContent/'+id, content)
+        return http.put(config.currentUrl + '/api/deleteContent/'+id, content)
         .then (
             response => {
                 dispatch(getContentFromServer())
@@ -89,7 +86,7 @@ export function removeContent(id){
     return (dispatch, getState) => {
         let form = getState().content.form
         const jwt = localStorage.getItem('token');
-        return http.remove(currentUrl + '/api/deleteContent/'+id)
+        return http.remove(config.currentUrl + '/api/deleteContent/'+id)
         .then ( 
             response => {
                 dispatch(getContentFromServer())

@@ -6,7 +6,6 @@ import R from 'ramda'
 import moment from 'moment'
 import image1 from '../../../images/gallery_list-1.jpg'
 import Field from '../../../components/CustomElements/Field'
-import ImagePicker from '../../../components/imagePicker/container/ImagePickerComponent'
 
 const PackageForm = ({form,images, fields, updateField, addPackage, toggleModal, isModalOpen})=> {
 	return(
@@ -31,7 +30,8 @@ const PackageForm = ({form,images, fields, updateField, addPackage, toggleModal,
                 <div className="form-group">
                   <label htmlFor="contact-email" className="form-label"></label>
                   {
-                    <img src={form.image ? form.image : image1} onClick={toggleModal}/>
+                    // <Field {...homeAboutMoreImage}/>
+                    // <img src={form.image ? form.image : image1} onClick={toggleModal}/>
                   }
                 </div>
               </div>
@@ -43,11 +43,6 @@ const PackageForm = ({form,images, fields, updateField, addPackage, toggleModal,
           </div>
         </div>
       </section>
-      { isModalOpen &&
-        <div className="form-modal">
-          <ImagePicker setImage={(field, value)=>{toggleModal(); updateField(field, value)}}/>
-        </div>  
-      }
       
     </div>
 	)

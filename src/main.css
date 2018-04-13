@@ -47,3 +47,78 @@ body{
 	    position: absolute;
     }
 }
+.form-group button{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border: none;
+    font-size: 24px;
+    background: transparent;
+}
+.login form{
+    justify-content: center;
+}
+
+.my-bars{
+    display:none;
+}
+@media screen and (max-width : 760px){
+    main{
+        margin-top:40px;
+    }
+    .header-wrapper{
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
+    .list-inline > li + li:before{
+        display:none;
+    }
+    .top-bar-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: stretch;
+    }
+    .tablet .header-2, .mobile .header-2{
+        padding: 0px;
+    }
+    .header-2 .jumbotron-variant-1{
+        display:none;
+    }
+    .my-bars{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right:10px;
+    }
+    .my-bars i{
+        font-style: normal;
+        color:#ffffff;
+        font-size: 22px;
+    }
+    .header-2 .rd-navbar-wrap{
+        display:none;
+    }
+    .active .header-2 .rd-navbar-wrap {
+        width: 100%;
+        z-index: 10;
+        display: block;
+        position: initial;
+    }
+    .header-2 .rd-navbar-wrap ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .rd-navbar-static .rd-navbar-inner, .rd-navbar-fullwidth .rd-navbar-inner{
+        padding:0px;
+    }
+    .rd-navbar-static .rd-navbar-nav > li + li{
+        margin:0;
+    }
+    .rd-navbar-static .rd-navbar-inner-wrap, .rd-navbar-fullwidth .rd-navbar-inner-wrap{
+        padding:0px;
+    }
+}

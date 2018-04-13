@@ -1,6 +1,4 @@
-var localUrl = "http://localhost:3001"
-var remoteUrl = "https://paros-sever.herokuapp.com"
-var currentUrl = remoteUrl
+import * as config from '../../utils/config'
 import * as http from '../../utils/axiosWrapper'
 
 export function onInputChange(field, value, id){
@@ -25,7 +23,7 @@ export function setPackageList(packageList){
 
 export function getPackagesFromServer(){
     return (dispatch, getState) => {
-        return http.get(currentUrl + '/api/getPackages')
+        return http.get(config.currentUrl + '/api/getPackages')
         .then ( 
             response => {
                 console.log('Success: ' + response)
@@ -41,7 +39,7 @@ export function getPackagesFromServer(){
 
 export function savePackageToServer(item){
     return (dispatch, getState) => {
-        return http.put(currentUrl + '/api/upsertPackage',item)
+        return http.put(config.currentUrl + '/api/upsertPackage',item)
         .then ( 
             response => {
                 dispatch(addPackage(response.data))

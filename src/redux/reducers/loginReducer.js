@@ -1,5 +1,5 @@
 import * as types from '../actions/actionTypes';
-// import * as systemUtils from 'utils/systemUtils';
+import * as systemUtils from '../../utils/systemUtils';
 import R from 'ramda';
 
 const initialState = {
@@ -22,7 +22,7 @@ export default function(state = initialState, action) {
             if(!action.token || action.token == ''){
                 newState.isAdmin = false
             } else{
-                // newState.isAdmin = systemUtils.isAdmin()
+                newState.isAdmin = systemUtils.isAdmin()
             }
     		return R.assoc('authenticated', newState.token !== '', newState )
         default:

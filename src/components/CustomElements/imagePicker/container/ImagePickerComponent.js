@@ -15,8 +15,11 @@ class ImagePickerComponent extends React.Component {
     }
 
     componentWillMount() {
+        // document.addEventListener('mousedown', this.toggleOpen );
     }
-
+    componentWillUnmount() {
+        // document.removeEventListener('mousedown', this.toggleOpen );
+      }
     toggleOpen() {
         this.setState({isOpen:!this.state.isOpen})
     }

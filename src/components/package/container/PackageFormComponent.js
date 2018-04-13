@@ -45,6 +45,7 @@ class PackageFormComponent extends React.Component {
             { name:'meals', placeholder: 'Meals', value: this.state.form['meals'], onUpdate: this.updateField },
             { name:'accommodation', placeholder: 'Accomodation', value: this.state.form['accommodation'], onUpdate: this.updateField },
             { name:'price', placeholder: 'Price', value: this.state.form['price'], onUpdate: this.updateField },
+            {type:'image-picker', images:this.props.images, fieldClass:'form-control', field: 'image', name:'image', placeholder: '', value: this.state.form['image'], onUpdate: this.updateField },
             { type:'date-range',startName:'start',endName:'end', name:'dates', placeholder: 'dates', fromValue: this.state.form['start'], toValue: this.state.form['end'], onUpdate: this.updateField },
             // { name: 'equipmentDescription', type: 'input', label: labels.equipmentDescription },
         ];
@@ -69,10 +70,7 @@ function mapStateToProps(state, ownProps) {
     function importAll(r) {
       return r.keys().map(r)
     }
-    let images = importAll(require.context('../../../../public/template/images/img', false, /\.(png|jpe?g|svg)$/));
-    images = images.map(image=>{
-      return { original:image, thumbnail:image, name: image.substr(image.lastIndexOf('/') + 1 )}
-    })
+    let images = importAll(require.context('../../../images/img', false, /\.(png|jpe?g|svg)$/));
     return {
         form,
         images

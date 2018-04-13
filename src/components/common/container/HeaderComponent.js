@@ -5,6 +5,28 @@ import {bindActionCreators} from 'redux'
 import {hashHistory} from 'react-router'
 import Header from '../display/Header'
 import * as contentActions from '../../../redux/actions/contentActions'
+import * as loginActions from '../../../redux/actions/loginActions'
+
+class HeaderComponent extends React.Component{
+    constructor(props) {
+        super(props)
+    }
+    state={
+        menuState:true,
+    }
+    toggleMenu = () => {
+        this.setState({menuState: !this.state.menuState})
+    }
+    render() {
+        return (
+            <Header 
+                {...this.props}
+                {...this.state}
+                toggleMenu={this.toggleMenu}
+            />
+        )
+    }
+}
 
 function mapStateToProps(state) {
 	let content = state.admin[state.admin.selectedLanguage].home 
@@ -16,6 +38,7 @@ function mapStateToProps(state) {
         : state.admin['english'].menuBar
     return {
     	home:content,
+        authenticated:state.login.authenticated,
     	menuBar:menuBar
     }
 }
@@ -25,13 +48,13 @@ function mapDispatchToProps(dispatch) {
         setLanguage(language){
             dispatch( contentActions.setLanguage(language) )
         },
+        logout(){
+            dispatch( loginActions.logout() )
+        }
     }
 }
-
-const HeaderComponent = connect( mapStateToProps, mapDispatchToProps )(Header)
-
 // HeaderComponent.propTypes = {
 // }
 
-export default HeaderComponent
+export default connect( mapStateToProps, mapDispatchToProps )(HeaderComponent)
 

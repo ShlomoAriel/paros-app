@@ -16,16 +16,13 @@ const Login = ({addUser, updateField,userForm, email, password, authenticated, o
 	        <section className="section-sm-top-133 text-center section-top-31">
 			  <div className="login shell">
 			  { !authenticated ?
-			  	<form onSubmit={login} method="post">
-			  		
+			  	<form onSubmit={login} method="post" className="range">
 				  	<div className="form cell-sm-4">
 					  	<div>
 					  		<Field {...emailInput}/>
 					  	</div>
-					  	<div>
+					  	<div className="form-group">
 					  		<Field {...passwordInput}/>
-					  	</div>
-					  	<div className="button-holder">
 					  		<button className="fa fa-arrow-circle-o-right login-button"></button>
 					  	</div>
 				  	</div>
@@ -35,22 +32,23 @@ const Login = ({addUser, updateField,userForm, email, password, authenticated, o
 			  }
 				 </div>
 			 </section>
-			 <section>
-			  <div className="login shell">
-			 	<form>
-				  	{ userFormFields.map( field =>
-				  		<div className="form cell-sm-4">
-				  			<Field {...field} />
-				  		</div>
-				  		)
-
-				  	}
-					  	<div className="button-holder">
-					  		<button type='button' onClick={addUser}className="fa fa-arrow-circle-o-right login-button"></button>
-					  	</div>
-			  	</form>
-			  	</div>
-		  	</section>
+			 {
+			 	// <section>
+				//  <div className="login shell">
+				// 	<form>
+				//   	{ userFormFields.map( field =>
+				//   		<div className="form cell-sm-4">
+				//   			<Field {...field} />
+				//   		</div>
+				//   		)
+				//   	}
+				//   	<div className="button-holder">
+				//   		<button type='button' onClick={addUser}className="fa fa-arrow-circle-o-right login-button"></button>
+				//   	</div>
+				//  	</form>
+				//  	</div>
+			  	// 	</section>
+			  }
 		 </main>
 );
 }

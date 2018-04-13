@@ -10,14 +10,8 @@ import * as contentActions from '../../../redux/actions/contentActions'
 class AdminComponent extends React.Component{
     constructor(props) {
         super(props)
-        this.setCurrentImageField = this.setCurrentImageField.bind(this)
     }
     state={
-        currentImageField: undefined,
-    }
-
-    setCurrentImageField(field){
-        this.setState({currentImageField:field})
     }
 
     render() {
@@ -25,7 +19,6 @@ class AdminComponent extends React.Component{
             <Admin 
                 {...this.props}
                 {...this.state}
-                setCurrentImageField={this.setCurrentImageField}
             />
         )
     }

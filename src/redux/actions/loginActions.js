@@ -1,8 +1,5 @@
-var localUrl = "http://localhost:3001"
-var remoteUrl = "https://paros-sever.herokuapp.com"
-var currentUrl = remoteUrl   
+import * as config from '../../utils/config'
 import * as http from '../../utils/axiosWrapper'
-
 import * as types from './actionTypes'
 import axios from 'axios';
 
@@ -26,7 +23,7 @@ export function login(field, value){
             type: types.TOGGLE_LOADER_FIELD,
             field: 'main'
         })
-        return axios.post(currentUrl + '/api/authenticate',form)
+        return axios.post(config.currentUrl + '/api/authenticate',form)
         .then ( 
             response => {
                 dispatch( storeUserCredentials(response.data) )
@@ -46,7 +43,7 @@ export function login(field, value){
 
 export function addUser(form){
     return dispatch =>{
-        return http.post(currentUrl + '/api/addUser',form).then(
+        return http.post(config.currentUrl + '/api/addUser',form).then(
             response => {
                 console.log('response: ' + response)
             }

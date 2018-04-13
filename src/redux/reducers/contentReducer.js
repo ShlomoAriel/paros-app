@@ -26,6 +26,7 @@ const initialState = {
 				homeAboutMore:{value:'תרגול יוגה הוא תרגול המבוסס בעיקר על תרגול פיזי הפועל על כמה רמות, ברמה הפיזית, ברמה האנרגטית'},
 			},
 			about:{
+				aboutImage:{},
 				aboutTitle:{value:'About Us'},
 				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
 			}
@@ -54,6 +55,7 @@ const initialState = {
 				homeAboutMore:{ value:'תרגול יוגה הוא תרגול המבוסס בעיקר על תרגול פיזי הפועל על כמה רמות, ברמה הפיזית, ברמה האנרגטית'},
 			},
 			about:{
+				aboutImage:{},
 				aboutTitle:{ value:'About Us'},
 				mainDescription:{ value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
 			}
