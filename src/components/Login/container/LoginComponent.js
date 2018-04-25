@@ -35,7 +35,6 @@ class LoginComponent extends React.Component {
 
     }
     updateField = (field, value)=>{
-        // this.setState(R.assoc( field, value, this.state.userForm ));
         this.setState( { userForm:{...this.state.userForm, [field]: value}} );
     }
 

@@ -12,7 +12,7 @@ class HeaderComponent extends React.Component{
         super(props)
     }
     state={
-        menuState:true,
+        menuState:false,
     }
     toggleMenu = () => {
         this.setState({menuState: !this.state.menuState})
@@ -29,13 +29,13 @@ class HeaderComponent extends React.Component{
 }
 
 function mapStateToProps(state) {
-	let content = state.admin[state.admin.selectedLanguage].home 
-        ? state.admin[state.admin.selectedLanguage].home
-        : state.admin['english'].home
+	let content = state.content[state.content.selectedLanguage].home 
+        ? state.content[state.content.selectedLanguage].home
+        : state.content[state.content.selectedLanguage].home
 
-    let menuBar = state.admin[state.admin.selectedLanguage].menuBar 
-        ? state.admin[state.admin.selectedLanguage].menuBar
-        : state.admin['english'].menuBar
+    let menuBar = state.content[state.content.selectedLanguage].menuBar 
+        ? state.content[state.content.selectedLanguage].menuBar
+        : state.content[state.content.selectedLanguage].menuBar
     return {
     	home:content,
         authenticated:state.login.authenticated,

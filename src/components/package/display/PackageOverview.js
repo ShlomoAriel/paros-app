@@ -11,7 +11,7 @@ import image7 from '../../../../public/template/images/gallery_list-7.jpg';
 import image8 from '../../../../public/template/images/gallery_list-8.jpg';
 import image9 from '../../../../public/template/images/gallery_list-9.jpg';
 
-const PackageOverview = ({packages})=> {
+const PackageOverview = ({packages, removeItem, isAdmin})=> {
 
 	return(
     	<main className="page-content">
@@ -20,7 +20,7 @@ const PackageOverview = ({packages})=> {
 	            <Link to="/package"><h5 className="tt-u">Packages</h5></Link>
 	            <ol className="breadcrumb">
 	              <li><Link to="/" activeClassName="active">Home</Link></li>
-	              <li>About</li>
+	              <li>Packages</li>
 	            </ol>
 	          </div>
 	        </section>
@@ -31,25 +31,30 @@ const PackageOverview = ({packages})=> {
 	                <div className="isotope">
 	                  <div className="row">
 	                  {
-	                  	packages.map( item => 
-	                  	<div className="col-xs-12 col-sm-6 col-md-12 col-lg-12 isotope-item">
-	                      <div className="media-variant-1 thumbnail-variant-5">
-	                      	{
-
-	                      	}
-	                      	<Link to={"/package/" + item._id} className="img-link-2 img-link-4 img-link-4-mod-1 media-left">
-	                      		<img src={item.image ? item.image: image1} alt="" width="684" height="693"/>
-	                      	</Link>
-	                        <div className="caption media-body">
-	                          <Link className="h5 tt-u" to={"package/"+(item._id)}>{item.name}</Link>
-	                          {item.description && <p>{item.description}</p>}
-	                          {item.meals && <p>Meals: {item.meals}</p>}
-	                          {item.accommodation && <p>Accommadation: {item.accommodation}</p>}
-	                          {item.price && <p>Price: {item.price}</p>}
-	           				 <Link to={"/package/" + item._id}><h5 className="btn-link">Learn More</h5></Link>
-	                        </div>
-	                      </div>
-	                    </div>
+						packages.map( item => 
+							<div className="col-xs-12 col-sm-6 col-md-12 col-lg-12 isotope-item">
+								<div className="media-variant-1 thumbnail-variant-5">
+									<Link to={"/package/" + item._id} className="media-left">
+										<img src={item.image ? item.image: image1} alt=""/>
+									</Link>
+									<div className="caption media-body">
+									{ isAdmin &&
+										<div className="button-holder">
+											<Link to={"/packageForm/" +  (item && item._id)}>
+												<i className="fas fa-pencil"></i>
+											</Link>
+											<i className="fas fa-trash" onClick={()=>removeItem(item._id)}></i>
+										</div>
+									}
+										<Link className="h5 tt-u" to={"package/"+(item._id)}>{item.name}</Link>
+											{item.description && <p>{item.description}</p>}
+											{item.meals && <p>Meals: {item.meals}</p>}
+											{item.accommodation && <p>Accommadation: {item.accommodation}</p>}
+											{item.price && <p>Price: {item.price}</p>}
+										<Link to={"/package/" + item._id}><h5 className="btn-link">Learn More</h5></Link>
+									</div>
+								</div>
+							</div>
 	                    )
 	                  }        
 	                  </div>

@@ -16,6 +16,7 @@ export const SAVE_EVENT = 'SAVE_EVENT'
 
 //Admin
 export const SET_LANGUAGE = 'SET_LANGUAGE'
+export const TOGGLE_LOADER = 'TOGGLE_LOADER'
 export const UPDATE_INPUT = 'UPDATE_INPUT'
 
 //Login

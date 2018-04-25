@@ -3,9 +3,11 @@ import { withRouter } from 'react-router';
 import {connect} from 'react-redux'
 import HeaderComponent from './components/common/container/HeaderComponent'
 import Footer from './components/common/Footer'
+import Loader from './components/Loader/Loader'
 import * as contentActions from './redux/actions/contentActions'
 import * as packageActions from './redux/actions/packageActions'
 import * as loginActions from './redux/actions/loginActions'
+import * as adminActions from './redux/actions/adminActions'
 import * as config from './utils/config'
 import GalleryPage from './components/gallery/ImageGallery';
 import './App.css';
@@ -37,6 +39,9 @@ class App extends Component {
   render() {
     return (
         <div className="page">
+          {
+            this.props.loading && <Loader/>
+          }
           <HeaderComponent/>
           {this.props.children}
           <Footer/>
@@ -47,16 +52,20 @@ class App extends Component {
 function mapStateToProps(state) {
   return{
     authenticated:state.login.authenticated,
+    loading:state.admin.loading,
   }
 }
 function mapDispatchToProps(dispatch) {
     return {
         getContentFromServer(){
-            dispatch( contentActions.getContentFromServer() )
-            dispatch( packageActions.getPackagesFromServer() )
+          dispatch( contentActions.getContentFromServer() )
+          dispatch( packageActions.getPackagesFromServer() )
         },
         setToken(token){
           dispatch(loginActions.setToken(token))
+        },
+        toggleLoader(){
+          dispatch(adminActions.toggleLoader())
         }
     }
 }

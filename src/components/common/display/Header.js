@@ -5,7 +5,7 @@ import image1 from '../../../../public/template/images/8.png';
 import image2 from '../../../../public/template/images/index-2-370x262.jpg';
 import image3 from '../../../../public/template/images/index-3-370x262.jpg';
 
-const Admin = ({home, menuBar, setLanguage, logout, authenticated, toggleMenu, menuState})=> {
+const Header = ({home, menuBar, setLanguage, logout, authenticated, toggleMenu, menuState})=> {
 	  			
 	return(
     <div className={'header-wrapper ' + (menuState? 'active':'')}>
@@ -21,8 +21,8 @@ const Admin = ({home, menuBar, setLanguage, logout, authenticated, toggleMenu, m
           <div className="my-bars"><i className="fas fa-bars" onClick={toggleMenu}></i></div>
         </div>
         <div className="jumbotron-variant-1"><span className="material-icons-notifications_active icon-lg icon-white"></span>
-          <h1><a href="./">{home.headerTitle}</a></h1>
-          <h5>{home.headerSubtitle}</h5>
+          <h1><a href="./">{home.headerTitle.value}</a></h1>
+          <h5>{home.headerSubtitle.value}</h5>
         </div>
          <div className="rd-navbar-wrap">
                 <nav data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fullwidth" data-sm-device-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" className="rd-navbar rd-navbar-static" data-sm-stick-up-offset="900px" data-md-stick-up-offset="900px" data-lg-stick-up-offset="1000px">
@@ -34,11 +34,11 @@ const Admin = ({home, menuBar, setLanguage, logout, authenticated, toggleMenu, m
                         </div>
                         <div className="rd-navbar-nav-wrap">
                           <ul className="rd-navbar-nav">
-                            <li><IndexLink to="/" activeClassName="active">{menuBar.home}</IndexLink></li>
-                            <li><Link to="/about" activeClassName="active">{menuBar.about}</Link></li>
-                            <li><Link to="/contact" activeClassName="active">{menuBar.contact}</Link></li>
-                            <li><Link to="/package" activeClassName="active">{menuBar.packages}</Link></li>
-                            <li><Link to="/gallery" activeClassName="active">{menuBar.gallery}</Link></li>
+                            <li><IndexLink onClick={toggleMenu} to="/" activeClassName="active">{menuBar.home}</IndexLink></li>
+                            <li><Link onClick={toggleMenu} to="/about" activeClassName="active">{menuBar.about}</Link></li>
+                            <li><Link onClick={toggleMenu} to="/contact" activeClassName="active">{menuBar.contact}</Link></li>
+                            <li><Link onClick={toggleMenu} to="/package" activeClassName="active">{menuBar.packages}</Link></li>
+                            <li><Link onClick={toggleMenu} to="/gallery" activeClassName="active">{menuBar.gallery}</Link></li>
                           </ul>
                       </div>
                   </div>
@@ -50,5 +50,5 @@ const Admin = ({home, menuBar, setLanguage, logout, authenticated, toggleMenu, m
 	)
 }
 
-export default Admin
+export default Header
 

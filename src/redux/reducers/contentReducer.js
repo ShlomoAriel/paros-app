@@ -12,6 +12,12 @@ const initialState = {
 			},
 			home:
 			{
+				sectionNames:{
+					yoga:'yoga',
+					food:'food',
+					nature:'nature',
+					more:'more',
+				},
 				headerTitle:{value:'Sea Lion'},
 				headerSubtitle:{value:'Yoga, Food, Nature...'},
 				welcomeTitle:{value:'Welcome'},
@@ -41,6 +47,12 @@ const initialState = {
 			},
 			home:
 			{
+				sectionNames:{
+					yoga:'יוגה',
+					food:'אוכל',
+					nature:'טבע',
+					more:'עוד',
+				},
 				headerTitle:{ value:'אריה הים'},
 				headerSubtitle:{ value:'יוגה, אוכל, טבע'},
 				welcomeTitle:{ value:'ברוכים הבאים'},

@@ -42,6 +42,7 @@ class PackageFormComponent extends React.Component {
         let fields = [
             { name:'name', placeholder: 'Name', value: this.state.form['name'], onUpdate: this.updateField },
             { name:'description', placeholder: 'Description', value: this.state.form['description'], onUpdate: this.updateField },
+            { type:'select',name:'language',options:[{label:'english', value:'english'},{label:'עברית', value:'hebrew'},{label:'french', value:'french'}], placeholder: 'language', value: this.state.form['language'], onSelect: this.updateField },
             { name:'meals', placeholder: 'Meals', value: this.state.form['meals'], onUpdate: this.updateField },
             { name:'accommodation', placeholder: 'Accomodation', value: this.state.form['accommodation'], onUpdate: this.updateField },
             { name:'price', placeholder: 'Price', value: this.state.form['price'], onUpdate: this.updateField },
@@ -80,7 +81,9 @@ function mapStateToProps(state, ownProps) {
 function mapDispatchToProps(dispatch) {
     return {
         addPackage: (form)=>{
-            dispatch(packageActions.savePackageToServer(form))
+            dispatch(packageActions.savePackageToServer(form)).then(i=>{
+               hashHistory.push('/package')
+            })
         }
     }
 }

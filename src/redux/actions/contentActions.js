@@ -25,22 +25,27 @@ export function setContentMap(contentMap){
 
 export function getContentFromServer(){
     return (dispatch, getState) => {
+        dispatch({type: types.TOGGLE_LOADER, value: true})
         return http.get(config.currentUrl + '/api/getContents')
         .then ( 
             response => {
                 console.log('Success: ' + response)
+                dispatch({type: types.TOGGLE_LOADER, value: false})
                 dispatch(setContentMap(response.data))
             }
         )
         .catch( 
-            error => 
+            error => {
+                dispatch({type: types.TOGGLE_LOADER, value: false})
                 console.log('error loging in: ' + error)
+            }
         )
     }
 }
 
 export function saveContentToServer(section, name, content, _id){
     return (dispatch, getState) => {
+        dispatch({type: types.TOGGLE_LOADER, value: true})
         let language = getState().content.selectedLanguage
         let contentObject = {
             _id:_id,
@@ -54,13 +59,16 @@ export function saveContentToServer(section, name, content, _id){
         return http.put(config.currentUrl + '/api/upsertContent',contentObject)
         .then ( 
             response => {
-                // dispatch(getContentFromServer())
+                dispatch(getContentFromServer())
+                dispatch({type: types.TOGGLE_LOADER, value: false})
                 console.log('Success: ' + response)
             }
         )
         .catch( 
-            error => 
+            error => {
+                dispatch({type: types.TOGGLE_LOADER, value: false})
                 console.log('error loging in: ' + error)
+            }
         )
     }
 }

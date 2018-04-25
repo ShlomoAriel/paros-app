@@ -8,12 +8,14 @@ import * as adminActions from '../../../redux/actions/adminActions'
 import * as packageActions from '../../../redux/actions/packageActions'
 
 function mapStateToProps(state) {
-    let content = state.admin[state.admin.selectedLanguage].home 
-        ? state.admin[state.admin.selectedLanguage].home
-        : state.admin['english'].home
+    let content = state.content[state.content.selectedLanguage].home 
+        ? state.content[state.content.selectedLanguage].home
+        : state.content['english'].home
+    let packages = state.packageState.packageList.filter( item => item.language == state.content.selectedLanguage)
     return {
         home:content,
-        packages:state.packageState.packageList,
+        isAdmin: state.login.isAdmin,
+        packages:packages,
     }
 }
 
@@ -22,6 +24,9 @@ function mapDispatchToProps(dispatch) {
     	onInputChange(field, value){
             dispatch( adminActions.onInputChange(field, value) )
         },
+        removeItem:(id)=>{
+            dispatch( packageActions.removePackage(id) )
+        }
     }
 }
 

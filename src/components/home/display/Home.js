@@ -6,7 +6,7 @@ import TextInput from '../../../components/CustomElements/TextInput/TextInput'
 import TextAreaInput from '../../../components/CustomElements/TextAreaInput/TextAreaInput'
 
 
-import image1 from '../../../images/img/gallery_justified-3.jpg';
+import image1 from '../../../images/img/image1.jpg';
 import image10 from '../../../../public/template/images/7.png';
 import image9 from '../../../../public/template/images/4.png';
 import image11 from '../../../../public/template/images/3.png';
@@ -27,7 +27,7 @@ import imageGallery4 from '../../../../public/template/images/index-18-684x864.j
 import imageGallery5 from '../../../../public/template/images/index-16-684x730.jpg';
 import imageGallery6 from '../../../../public/template/images/index-19-684x1050.jpg';
 
-const Admin = ({home, packages})=> {
+const Home = ({home, packages})=> {
 
 	return(
 		 <main className="page-content">
@@ -51,42 +51,38 @@ const Admin = ({home, packages})=> {
             }
             <div className="range range-condensed">
               <div className="cell-xs-6 cell-md-3 cell-xs-push-1 cell-md-push-1">
-                <div className="thumbnail-variant-1"><a href="#" className="img-link">
-                <img src={home.homeAboutYogaImage.value} alt="" width="514" height="550"/></a>
+                <div className="thumbnail-variant-1"><div className="img-link">
+                <img src={home.homeAboutYogaImage.value} alt=""/></div>
                   <div className="caption">
-                    <div className="h5 tt-u"><a href="#">יוגה</a></div>
+                    <div className="h5 tt-u">{home.sectionNames.yoga}</div>
                     <p>{home.homeAboutYoga.value}</p>
-                    <a href="#" className="btn-link">Learn more</a>
                   </div>
                 </div>
               </div>
               <div className="cell-xs-6 cell-md-3 cell-xs-push-3 cell-md-push-2 offset-top-30 offset-xs-top-0">
-                <div className="thumbnail-variant-1"><a href="#" className="img-link">
-                <img src={home.homeAboutFoodImage.value} alt="" width="514" height="670"/></a>
+                <div className="thumbnail-variant-1"><div className="img-link">
+                <img src={home.homeAboutFoodImage.value} alt=""/></div>
                   <div className="caption">
-                    <div className="h5 tt-u"><a href="#">אוכל</a></div>
+                    <div className="h5 tt-u">{home.sectionNames.food}</div>
                     <p>{home.homeAboutFood.value}</p>
-                    <a href="#" className="btn-link">Learn more</a>
                   </div>
                 </div>
               </div>
               <div className="cell-xs-6 cell-md-3 cell-xs-push-2 cell-md-push-3 offset-top-30 offset-xs-top-0">
-                <div className="thumbnail-variant-1"><a href="#" className="img-link">
-                <img src={home.homeAboutNatureImage.value} alt="" width="514" height="550"/></a>
+                <div className="thumbnail-variant-1"><div className="img-link">
+                <img src={home.homeAboutNatureImage.value} alt=""/></div>
                   <div className="caption">
-                    <div className="h5 tt-u"><a href="#">Nature</a></div>
+                    <div className="h5 tt-u">{home.sectionNames.nature}</div>
                     <p>{home.homeAboutNature.value}</p>
-                    <a href="#" className="btn-link">Learn more</a>
                   </div>
                 </div>
               </div>
               <div className="cell-xs-6 cell-md-3 cell-xs-push-4 cell-md-push-4 offset-top-30 offset-xs-top-0">
-                <div className="thumbnail-variant-1"><a href="#" className="img-link">
-                <img src={home.homeAboutMoreImage.value} alt="" width="514" height="730"/></a>
+                <div className="thumbnail-variant-1"><div className="img-link">
+                <img src={home.homeAboutMoreImage.value} alt="" /></div>
                   <div className="caption">
-                    <div className="h5 tt-u"><a href="#">More</a></div>
+                    <div className="h5 tt-u">{home.sectionNames.more}</div>
                     <p>{home.homeAboutMore.value}</p>
-                    <a href="#" className="btn-link">Learn more</a>
                   </div>
                 </div>
               </div>
@@ -139,5 +135,5 @@ const Admin = ({home, packages})=> {
 	)
 }
 
-export default Admin
+export default Home
 

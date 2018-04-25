@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Select from 'react-select'
 
-const SelectInput = ({ field, label, onSelect, defaultOption, value, options, placeholder }) => {
+const SelectInput = ({ name, label, onSelect, defaultOption, value, options, placeholder }) => {
 
     value = value || defaultOption
 
@@ -12,13 +12,13 @@ const SelectInput = ({ field, label, onSelect, defaultOption, value, options, pl
 
     return (
         <div>
-            { label && <label htmlFor={field}>{label}</label> }
+            { label && <label htmlFor={name}>{label}</label> }
             <Select
-                name={field}
+                name={name}
                 value={value}
                 searchable={false}
                 options={options}
-                onChange={ option => onSelect(field, option.value) }
+                onChange={ option => onSelect(name, option.value) }
                 filterOption={filterOption}
                 noResultsText={'No results found'}
                 placeholder={placeholder}
@@ -29,7 +29,7 @@ const SelectInput = ({ field, label, onSelect, defaultOption, value, options, pl
 }
 
 SelectInput.propTypes = {
-    field: PropTypes.string,
+    name: PropTypes.string,
     label: PropTypes.string,
     onSelect: PropTypes.func,
     defaultOption: PropTypes.string,

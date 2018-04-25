@@ -2,6 +2,7 @@ body{
 }
 @import '~react-big-calendar/lib/css/react-big-calendar.css';
 @import "./components/main.css";
+@import '~react-select/dist/react-select.css';
 .form-control{
 	padding: 12px 63px;
 }
@@ -62,7 +63,34 @@ body{
 .my-bars{
     display:none;
 }
+.button-holder{
+    position: absolute;
+    top: 5px;
+    right: 22px;
+}
+.button-holder i{
+    font-style: normal;
+    font-size: 20px;
+    margin: 5px;
+    padding: 3px;
+}
+.media-variant-1 .media-body{
+    position: relative;
+}
 @media screen and (max-width : 760px){
+    .button-holder {
+        top: 18px;
+    }
+    .img-height img{
+        height: auto;
+    }
+    .thumbnail:before{
+        display:none;
+    }
+    .thumbnail .caption a{
+        background: rgba(255,255,255,0.4);
+        padding: 10px;
+    }
     main{
         margin-top:40px;
     }

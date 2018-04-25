@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 // import AutoCompleteInput from './field/AutoCompleteInput'
-// import SelectInput from './field/SelectInput'
+import SelectInput from './SelectInput/SelectInput'
 import TextInput from './TextInput/TextInput'
 // import Checkbox from './field/Checkbox'
 import DateRangePicker from './DateRangePicker/DateRangePicker'
@@ -18,8 +18,8 @@ const Field = ({...props, value, type, fromValue, toValue, onEnter}) => {
     switch (type) {
         // case "auto-complete":
         //     return <AutoCompleteInput {...props} />;
-        // case 'select':
-        //     return <SelectInput {...props} />;
+        case 'select':
+            return <SelectInput {...props} />;
         // case 'number':
         // case 'email':
         // case 'text':

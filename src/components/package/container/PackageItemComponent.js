@@ -13,6 +13,7 @@ function mapStateToProps(state, ownProps) {
     let packageContent = state.packageState.packageList.find( item => item._id == param)
     return {
         packageContent: packageContent,
+        isAdmin: state.login.isAdmin,
     }
 }
 
