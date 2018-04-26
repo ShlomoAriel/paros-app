@@ -14,6 +14,7 @@ const Header = ({home, menuBar, setLanguage, logout, authenticated, toggleMenu, 
           <ul className="list-inline">
             <li onClick={()=>setLanguage('hebrew')}><a>עברית</a></li>
             <li onClick={()=>setLanguage('english')}><a>English</a></li>
+            <li onClick={()=>setLanguage('french')}><a>François</a></li>
             {authenticated && <li><Link to="/admin">admin</Link></li>}
             {!authenticated && <li><Link to="/login">login</Link></li>}
             {authenticated && <li><Link onClick={logout}>logout</Link></li>}
@@ -36,7 +37,8 @@ const Header = ({home, menuBar, setLanguage, logout, authenticated, toggleMenu, 
                           <ul className="rd-navbar-nav">
                             <li><IndexLink onClick={toggleMenu} to="/" activeClassName="active">{menuBar.home}</IndexLink></li>
                             <li><Link onClick={toggleMenu} to="/about" activeClassName="active">{menuBar.about}</Link></li>
-                            <li><Link onClick={toggleMenu} to="/contact" activeClassName="active">{menuBar.contact}</Link></li>
+                            {//<li><Link onClick={toggleMenu} to="/contact" activeClassName="active">{menuBar.contact}</Link></li>
+                            }
                             <li><Link onClick={toggleMenu} to="/package" activeClassName="active">{menuBar.packages}</Link></li>
                             <li><Link onClick={toggleMenu} to="/gallery" activeClassName="active">{menuBar.gallery}</Link></li>
                           </ul>

@@ -9,9 +9,13 @@ import Home from '../display/Home'
 function mapStateToProps(state) {
 	let content = state.content[state.content.selectedLanguage].home
         ? state.content[state.content.selectedLanguage].home
-        : state.content[state.content.selectedLanguage].home
+        : state.content['english'].home
+    let menuBar = state.content[state.content.selectedLanguage].menuBar 
+        ? state.content[state.content.selectedLanguage].menuBar
+        : state.content['english'].menuBar
     return {
         packages:state.packageState.packageList,
+        menuBar:menuBar,
     	home: content
     }
 }

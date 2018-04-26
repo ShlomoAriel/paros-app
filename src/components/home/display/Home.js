@@ -27,7 +27,7 @@ import imageGallery4 from '../../../../public/template/images/index-18-684x864.j
 import imageGallery5 from '../../../../public/template/images/index-16-684x730.jpg';
 import imageGallery6 from '../../../../public/template/images/index-19-684x1050.jpg';
 
-const Home = ({home, packages})=> {
+const Home = ({home, packages, menuBar})=> {
 
 	return(
 		 <main className="page-content">
@@ -91,7 +91,7 @@ const Home = ({home, packages})=> {
         </section>
          <section className="text-center">
          <div className="shell-fluid inset-left-0 inset-right-0">
-            <h2 className="divider">חבילות</h2>
+            <h2 className="divider">{menuBar.packages}</h2>
             <div className="range range-condensed">
               <div className="shell-fluid inset-left-0 inset-right-0">
                 <div className="range range-condensed">
