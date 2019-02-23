@@ -11,16 +11,16 @@ import image7 from '../../../../public/template/images/gallery_list-7.jpg';
 import image8 from '../../../../public/template/images/gallery_list-8.jpg';
 import image9 from '../../../../public/template/images/gallery_list-9.jpg';
 
-const PackageOverview = ({packages, removeItem, isAdmin})=> {
+const PackageOverview = ({packages, menuBar, removeItem, isAdmin})=> {
 
 	return(
     	<main className="page-content">
 	      <section className="section-sm-top-133 text-center section-top-31">
 	          <div className="shell text-center">
-	            <Link to="/package"><h5 className="tt-u">Packages</h5></Link>
+	            <Link to="/package"><h5 className="tt-u">{menuBar.packages}</h5></Link>
 	            <ol className="breadcrumb">
-	              <li><Link to="/" activeClassName="active">Home</Link></li>
-	              <li>Packages</li>
+	              <li><Link to="/" activeClassName="active">{menuBar.home}</Link></li>
+	              <li>{menuBar.packages}</li>
 	            </ol>
 	          </div>
 	        </section>

@@ -21,32 +21,6 @@ class ImageGallery2 extends React.Component {
 
   render() {
 
-    // const images = [
-    //   {
-    //     original: 'http://lorempixel.com/1000/600/nature/1/',
-    //     thumbnail: 'http://lorempixel.com/250/150/nature/1/',
-    //   },
-    //   {
-    //     original: 'http://lorempixel.com/1000/600/nature/2/',
-    //     thumbnail: 'http://lorempixel.com/250/150/nature/2/'
-    //   },
-    //   {
-    //     original: 'http://lorempixel.com/1000/600/nature/3/',
-    //     thumbnail: 'http://lorempixel.com/250/150/nature/3/'
-    //   }
-    // ]
-    // const images = [
-    //   {original:image1, thumbnail:image1}, 
-    //   {original:image2, thumbnail:image2}, 
-    //   {original:image3, thumbnail:image3}, 
-    //   {original:image4, thumbnail:image4}, 
-    //   {original:image5, thumbnail:image5}, 
-    //   {original:image6, thumbnail:image6}, 
-    //   {original:image7, thumbnail:image7}, 
-    //   {original:image8, thumbnail:image8}, 
-    //   {original:image9, thumbnail:image9}
-    // ]
-
     function importAll(r) {
       return r.keys().map(r)
     }
@@ -69,7 +43,6 @@ class ImageGallery2 extends React.Component {
             }
         <section className="section-sm-top-133 border-bottom container">
           <div className="shell-fluid inset-left-0 inset-right-0">
-            <h2 className="divider text-center">Gallery</h2>
             <div className="range range-condensed" id="range-fix">
               <ImageGallery
                 items={images}

@@ -18,7 +18,15 @@ body{
 		}
 	}
 }
-
+.jumbotron-variant-1 > span {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.jumbotron-variant-1 > span  img{
+    width:40px;
+}
 .form-modal{
     position: fixed;
     top: 0;

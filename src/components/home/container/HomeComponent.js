@@ -9,13 +9,18 @@ import Home from '../display/Home'
 function mapStateToProps(state) {
 	let content = state.content[state.content.selectedLanguage].home
         ? state.content[state.content.selectedLanguage].home
-        : state.content['english'].home
+        : state.content[state.content.selectedLanguage].home
     let menuBar = state.content[state.content.selectedLanguage].menuBar 
         ? state.content[state.content.selectedLanguage].menuBar
-        : state.content['english'].menuBar
+        : state.content[state.content.selectedLanguage].menuBar
+    let labels = state.content[state.content.selectedLanguage].labels 
+        ? state.content[state.content.selectedLanguage].labels
+        : state.content[state.content.selectedLanguage].labels
+    let packages = state.packageState.packageList.filter( item => item.language == state.content.selectedLanguage)
     return {
-        packages:state.packageState.packageList,
+        packages:packages,
         menuBar:menuBar,
+        labels:labels,
     	home: content
     }
 }

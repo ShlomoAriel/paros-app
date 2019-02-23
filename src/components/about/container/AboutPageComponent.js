@@ -13,8 +13,12 @@ function mapStateToProps(state) {
     let about = state.content[state.content.selectedLanguage].about 
         ? state.content[state.content.selectedLanguage].about
         : state.content[state.content.selectedLanguage].about
+    let menuBar = state.content[state.content.selectedLanguage].menuBar 
+        ? state.content[state.content.selectedLanguage].menuBar
+        : state.content[state.content.selectedLanguage].menuBar
     return {
-      about:about
+      about:about,
+      menuBar:menuBar      
     }
 }
 

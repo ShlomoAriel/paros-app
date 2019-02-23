@@ -27,13 +27,25 @@ class AdminComponent extends React.Component{
 function mapStateToProps(state) {
     let content = state.content[state.content.selectedLanguage].home 
         ? state.content[state.content.selectedLanguage].home
-        : state.content['english'].home
+        : state.content[state.content.selectedLanguage].home
     let about = state.content[state.content.selectedLanguage].about 
         ? state.content[state.content.selectedLanguage].about
-        : state.content['english'].about
+        : state.content[state.content.selectedLanguage].about
+    let paros = state.content[state.content.selectedLanguage].paros 
+        ? state.content[state.content.selectedLanguage].paros
+        : state.content[state.content.selectedLanguage].paros
+    let accommodation = state.content[state.content.selectedLanguage].accommodation 
+        ? state.content[state.content.selectedLanguage].accommodation
+        : state.content[state.content.selectedLanguage].accommodation
+    let menuBar = state.content[state.content.selectedLanguage].menuBar 
+        ? state.content[state.content.selectedLanguage].menuBar
+        : state.content[state.content.selectedLanguage].menuBar
     return {
         home:content,
-        about:about
+        about:about,
+        paros:paros,
+        accommodation:accommodation,
+        menuBar:menuBar
     }
 }
 

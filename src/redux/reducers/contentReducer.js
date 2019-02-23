@@ -3,9 +3,24 @@ import * as types from '../actions/actionTypes'
 const initialState = {
 		selectedLanguage:'english',
 		english:{
+			labels:{
+				accommodation:'Accommodation',
+				meals:'Meals',
+				price:'Price',
+				email:'Email',
+				phone:'Phone',
+				garden:'The Garden',
+				about:'About Us',
+				home:'Home',
+				packages:'Packages',
+				gallery:'Gallery',
+				more:'More',
+			},
 			menuBar:{
 				home:'Home',
-				about:'About',
+				about:'About Us',
+				paros:'Paros',
+				accommodation:'Accommodation',
 				contact:'Contact',
 				packages:'Packages',
 				gallery:'Gallery',
@@ -15,32 +30,58 @@ const initialState = {
 				sectionNames:{
 					yoga:'yoga',
 					food:'food',
-					nature:'nature',
+					accommodation:'accommodation',
 					more:'more',
 				},
-				headerTitle:{value:'Sea Lion'},
-				headerSubtitle:{value:'Yoga, Food, Nature...'},
+				headerTitle:{value:'Sea Lion Eco Lodge'},
+				headerLocationTitle:{value:'PAROS ISLAND, GREECE'},
+				headerSubtitle:{value:'Yoga  -  Food  -  Accommodation'},
 				welcomeTitle:{value:'Welcome'},
 				welcomeText:{value:'בואו לחוות ימים קסומים של תרגול יוגה אכילה טובה והטבע המרהיב של פארוס. תרגול יוגה באויר הפתוח בנקודות שונות באי. מסלולי הליכה מרהבים בליווי פיקניק ופינוקים, ארחות גורמה במסעדות הנבחרו בקפידה ומארוחות שף אישיות מותאמת למזג האויר טריות השוק ולתזונתו של האורח. בין תרגול יוגה לארוחה, בין מנוחה למנוחה מציא האי פאורס חופים מטריפים ספורט ימי רכיבה על סוסים מוסיקה פסטיבלים ושפע של טבע כפרי בחופשה מאורגנת ומשולמת מראש בתקציב ובקצב שלכם.'},
 				homeAboutYoga:{value:'תרגול יוגה הוא תרגול המבוסס בעיקר על תרגול פיזי הפועל על כמה רמות, ברמה הפיזית, ברמה האנרגטית'},
 				homeAboutYogaImage:{value:undefined},
 				homeAboutFoodImage:{value:undefined},
 				homeAboutMoreImage:{value:undefined},
-				homeAboutNatureImage:{value:undefined},
+				homeAboutAccommodationImage:{value:undefined},
 				homeAboutFood:{value:'תרגול יוגה הוא תרגול המבוסס בעיקר על תרגול פיזי הפועל על כמה רמות, ברמה הפיזית, ברמה האנרגטית'},
-				homeAboutNature:{value:'תרגול יוגה הוא תרגול המבוסס בעיקר על תרגול פיזי הפועל על כמה רמות, ברמה הפיזית, ברמה האנרגטית'},
+				homeAboutAccommodation:{value:'תרגול יוגה הוא תרגול המבוסס בעיקר על תרגול פיזי הפועל על כמה רמות, ברמה הפיזית, ברמה האנרגטית'},
 				homeAboutMore:{value:'תרגול יוגה הוא תרגול המבוסס בעיקר על תרגול פיזי הפועל על כמה רמות, ברמה הפיזית, ברמה האנרגטית'},
 			},
 			about:{
 				aboutImage:{},
 				aboutTitle:{value:'About Us'},
 				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
+			paros:{
+				parosImage:{},
+				parosTitle:{value:'Paros Island'},
+				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
+			accommodation:{
+				accommodationImage:{},
+				accommodationTitle:{value:'Accommodation'},
+				mainDescription:{value:'Accommodation content.'}
 			}
 		},
 		french:{
+			labels:{
+				accommodation:'Hébergement',
+				meals:'Meals',
+				price:'Price',
+				email:'Email',
+				phone:'Phone',
+				garden:'The Garden',
+				about:'About',
+				home:'Home',
+				packages:'Paquets',
+				gallery:'Galerie',
+				more:'Plus',
+			},
 			menuBar:{
 				home:'Home',
-				about:'About',
+				about:'About Us',
+				paros:'Paros',
+				accommodation:'Hébergement',
 				contact:'Contact',
 				packages:'Paquets',
 				gallery:'Galerie',
@@ -50,32 +91,58 @@ const initialState = {
 				sectionNames:{
 					yoga:'Yoga',
 					food:'Aliments',
-					nature:'La nature',
+					accommodation:'Hébergement',
 					more:'Plus',
 				},
-				headerTitle:{value:'Sea Lion'},
-				headerSubtitle:{value:'Yoga, Food, Nature...'},
+				headerTitle:{value:'Sea Lion Eco Lodge'},
+				headerLocationTitle:{value:'PAROS ISLAND, GREECE'},
+				headerSubtitle:{value:'Yoga, Food, Hébergement...'},
 				welcomeTitle:{value:'Welcome'},
 				welcomeText:{value:'Entrez le contenu'},
 				homeAboutYoga:{value:'Entrez le contenu'},
 				homeAboutYogaImage:{value:undefined},
 				homeAboutFoodImage:{value:undefined},
 				homeAboutMoreImage:{value:undefined},
-				homeAboutNatureImage:{value:undefined},
+				homeAboutAccommodationImage:{value:undefined},
 				homeAboutFood:{value:'Entrez le contenu'},
-				homeAboutNature:{value:'Entrez le contenu'},
+				homeAboutAccommodation:{value:'Entrez le contenu'},
 				homeAboutMore:{value:'Entrez le contenu'},
 			},
 			about:{
 				aboutImage:{},
 				aboutTitle:{value:'About Us'},
 				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
+			paros:{
+				parosImage:{},
+				parosTitle:{value:'Paros Island'},
+				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
+			accommodation:{
+				accommodationImage:{},
+				accommodationTitle:{value:'Hébergement'},
+				mainDescription:{value:'Hébergement content.'}
 			}
 		},
 		hebrew:{
+			labels:{
+				accommodation:'לינה',
+				meals:'ארוחות',
+				price:'מחיר',
+				email:'דואר אלקטרוני',
+				phone:'טלפון',
+				garden:'הגן',
+				about:'אודות',
+				packages:'חבילות',
+				home:'בית',
+				gallery:'גלריה',
+				more:'עוד',
+			},
 			menuBar:{
 				home:'בית',
 				about:'אודות',
+				paros:'פארוס',
+				accommodation:'לינה',
 				contact:'יצירת קשר',
 				packages:'חבילות',
 				gallery:'גלריה',
@@ -85,26 +152,37 @@ const initialState = {
 				sectionNames:{
 					yoga:'יוגה',
 					food:'אוכל',
-					nature:'טבע',
+					accommodation:'לינה',
 					more:'עוד',
 				},
-				headerTitle:{ value:'אריה הים'},
+				headerTitle:{value:'Sea Lion Eco Lodge'},
+				headerLocationTitle:{value:'פארוס, יוון'},
 				headerSubtitle:{ value:'יוגה, אוכל, טבע'},
 				welcomeTitle:{ value:'ברוכים הבאים'},
 				homeAboutYogaImage:{value:undefined},
 				homeAboutFoodImage:{value:undefined},
 				homeAboutMoreImage:{value:undefined},
-				homeAboutNatureImage:{value:undefined},
+				homeAboutAccommodationImage:{value:undefined},
 				welcomeText:{ value:'בואו לחוות ימים קסומים של תרגול יוגה אכילה טובה והטבע המרהיב של פארוס. תרגול יוגה באויר הפתוח בנקודות שונות באי. מסלולי הליכה מרהבים בליווי פיקניק ופינוקים, ארחות גורמה במסעדות הנבחרו בקפידה ומארוחות שף אישיות מותאמת למזג האויר טריות השוק ולתזונתו של האורח. בין תרגול יוגה לארוחה, בין מנוחה למנוחה מציא האי פאורס חופים מטריפים ספורט ימי רכיבה על סוסים מוסיקה פסטיבלים ושפע של טבע כפרי בחופשה מאורגנת ומשולמת מראש בתקציב ובקצב שלכם.'},
 				homeAboutYoga:{ value:'תרגול יוגה הוא תרגול המבוסס בעיקר על תרגול פיזי הפועל על כמה רמות, ברמה הפיזית, ברמה האנרגטית'},
 				homeAboutFood:{ value:'תרגול יוגה הוא תרגול המבוסס בעיקר על תרגול פיזי הפועל על כמה רמות, ברמה הפיזית, ברמה האנרגטית'},
-				homeAboutNature:{ value:'תרגול יוגה הוא תרגול המבוסס בעיקר על תרגול פיזי הפועל על כמה רמות, ברמה הפיזית, ברמה האנרגטית'},
+				homeAboutAccommodation:{ value:'תרגול יוגה הוא תרגול המבוסס בעיקר על תרגול פיזי הפועל על כמה רמות, ברמה הפיזית, ברמה האנרגטית'},
 				homeAboutMore:{ value:'תרגול יוגה הוא תרגול המבוסס בעיקר על תרגול פיזי הפועל על כמה רמות, ברמה הפיזית, ברמה האנרגטית'},
 			},
 			about:{
 				aboutImage:{},
 				aboutTitle:{ value:'About Us'},
 				mainDescription:{ value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
+			paros:{
+				parosImage:{},
+				parosTitle:{value:'האי פארוס'},
+				mainDescription:{value:'אודות האי פארוס'}
+			},
+			accommodation:{
+				accommodationImage:{},
+				accommodationTitle:{value:'לינה'},
+				mainDescription:{value:'לינה.'}
 			}
 		}
 	}

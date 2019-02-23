@@ -10,12 +10,16 @@ import * as packageActions from '../../../redux/actions/packageActions'
 function mapStateToProps(state) {
     let content = state.content[state.content.selectedLanguage].home 
         ? state.content[state.content.selectedLanguage].home
-        : state.content['english'].home
+        : state.content[state.content.selectedLanguage].home
+    let menuBar = state.content[state.content.selectedLanguage].menuBar 
+        ? state.content[state.content.selectedLanguage].menuBar
+        : state.content[state.content.selectedLanguage].menuBar
     let packages = state.packageState.packageList.filter( item => item.language == state.content.selectedLanguage)
     return {
         home:content,
         isAdmin: state.login.isAdmin,
         packages:packages,
+        menuBar:menuBar
     }
 }
 

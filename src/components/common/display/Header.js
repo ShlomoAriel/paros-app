@@ -1,6 +1,7 @@
 // import PropTypes from 'prop-types'
 import React  from 'react'
 import {Link, IndexLink} from 'react-router'
+import logo from "../../../../build/static/media/sealion.2268f3f0.png"
 import image1 from '../../../../public/template/images/8.png';
 import image2 from '../../../../public/template/images/index-2-370x262.jpg';
 import image3 from '../../../../public/template/images/index-3-370x262.jpg';
@@ -21,7 +22,11 @@ const Header = ({home, menuBar, setLanguage, logout, authenticated, toggleMenu, 
           </ul>
           <div className="my-bars"><i className="fas fa-bars" onClick={toggleMenu}></i></div>
         </div>
-        <div className="jumbotron-variant-1"><span className="material-icons-notifications_active icon-lg icon-white"></span>
+        <div className="jumbotron-variant-1">
+          <span class="location-title">
+            <span>{home.headerLocationTitle.value}</span>
+            <span><img src={logo}/></span>
+          </span>
           <h1><a href="./">{home.headerTitle.value}</a></h1>
           <h5>{home.headerSubtitle.value}</h5>
         </div>
@@ -37,6 +42,7 @@ const Header = ({home, menuBar, setLanguage, logout, authenticated, toggleMenu, 
                           <ul className="rd-navbar-nav">
                             <li><IndexLink onClick={toggleMenu} to="/" activeClassName="active">{menuBar.home}</IndexLink></li>
                             <li><Link onClick={toggleMenu} to="/about" activeClassName="active">{menuBar.about}</Link></li>
+                            <li><Link onClick={toggleMenu} to="/paros" activeClassName="active">{menuBar.paros}</Link></li>
                             {//<li><Link onClick={toggleMenu} to="/contact" activeClassName="active">{menuBar.contact}</Link></li>
                             }
                             <li><Link onClick={toggleMenu} to="/package" activeClassName="active">{menuBar.packages}</Link></li>

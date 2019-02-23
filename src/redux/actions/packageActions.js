@@ -22,6 +22,13 @@ export function setPackageList(packageList){
     }
 }
 
+export function removePackageFromList(id){
+    return {
+        type: 'REMOVE_PACKAGE_FROM_LIST',
+        id: id
+    }
+}
+
 export function getPackagesFromServer(){
     return (dispatch, getState) => {
         dispatch({type: types.TOGGLE_LOADER, value: true})
@@ -44,12 +51,13 @@ export function getPackagesFromServer(){
 
 export function savePackageToServer(item){
     return (dispatch, getState) => {
-        // let language = getState().content.selectedLanguage
-        // item.language = language
         dispatch({type: types.TOGGLE_LOADER, value: true})
         return http.put(config.currentUrl + '/api/upsertPackage',item)
         .then ( 
             response => {
+                if(item._id){
+                    dispatch( removePackageFromList(item._id) )
+                }
                 dispatch({type: types.TOGGLE_LOADER, value: false})
                 dispatch(addPackage(response.data))
                 console.log('Success: ' + response)

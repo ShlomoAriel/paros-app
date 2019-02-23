@@ -55,3 +55,11 @@ body{
     width: 470px;
     height: 370px;
 }
+@media (max-width: 780px){
+	.header-2 {
+		padding: 2px 0;
+	}
+}
+.header-2 .jumbotron-variant-1 h1 {
+    font-size: 70px;
+}

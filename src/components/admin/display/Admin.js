@@ -5,7 +5,7 @@ import * as adminActions from '../../../redux/actions/adminActions'
 import Field from '../../../components/CustomElements/Field'
 import image1 from '../../../images/gallery_list-1.jpg'
 
-const Admin = ({home, about, onInputChange, setLanguage, save })=> {
+const Admin = ({home, about, paros, accommodation, menuBar, onInputChange, setLanguage, save })=> {
 		function importAll(r) {
 	      return r.keys().map(r)
 	    }
@@ -14,14 +14,20 @@ const Admin = ({home, about, onInputChange, setLanguage, save })=> {
     const homeWelcomeContent = {type:'text-area', fieldClass:'form-control', section:'home',field: 'welcomeText', name:'welcomeText', placeholder: 'Welcome Text', value: home.welcomeText.value, onUpdate: onInputChange }
     const homeAboutCardYoga = {type:'text-area', fieldClass:'form-control', section:'home',field: 'homeAboutYoga', name:'homeAboutYoga', placeholder: '', value: home.homeAboutYoga.value, onUpdate: onInputChange }
     const homeAboutCardFood = {type:'text-area', fieldClass:'form-control', section:'home',field: 'homeAboutFood', name:'homeAboutFood', placeholder: '', value: home.homeAboutFood.value, onUpdate: onInputChange }
-    const homeAboutCardNature = {type:'text-area', fieldClass:'form-control', section:'home',field: 'homeAboutNature', name:'homeAboutNature', placeholder: '', value: home.homeAboutNature.value, onUpdate: onInputChange }
+    const homeAboutCardAccommodation = {type:'text-area', fieldClass:'form-control', section:'home',field: 'homeAboutAccommodation', name:'homeAboutAccommodation', placeholder: '', value: home.homeAboutAccommodation.value, onUpdate: onInputChange }
     const homeAboutCardMore = {type:'text-area', fieldClass:'form-control', section:'home',field: 'homeAboutMore', name:'homeAboutMore', placeholder: '', value: home.homeAboutMore.value, onUpdate: onInputChange }
+    const parosTitle = { fieldClass:'form-control', section:'paros',field: 'parosTitle', name:'parosTitle', placeholder: '', value: paros.parosTitle.value, onUpdate: onInputChange }
+    const parosMainDescription = {type:'text-area', fieldClass:'form-control', section:'paros', field: 'mainDescription', name:'mainDescription', placeholder: '', value: paros.mainDescription.value, onUpdate: onInputChange }
+    const parosImage = {type:'image-picker', images:images, fieldClass:'form-control', section:'paros', field: 'parosImage', name:'parosImage', placeholder: '', value: paros.parosImage.value, onUpdate: onInputChange }
+    const accommodationTitle = { fieldClass:'form-control', section:'accommodation',field: 'accommodationTitle', name:'accommodationTitle', placeholder: '', value: accommodation.accommodationTitle.value, onUpdate: onInputChange }
+    const accommodationMainDescription = {type:'text-area', fieldClass:'form-control', section:'accommodation', field: 'mainDescription', name:'mainDescription', placeholder: '', value: accommodation.mainDescription.value, onUpdate: onInputChange }
+    const accommodationImage = {type:'image-picker', images:images, fieldClass:'form-control', section:'accommodation', field: 'accommodationImage', name:'accommodationImage', placeholder: '', value: accommodation.accommodationImage.value, onUpdate: onInputChange }
     const aboutUsTitle = { fieldClass:'form-control', section:'about',field: 'aboutTitle', name:'aboutTitle', placeholder: '', value: about.aboutTitle.value, onUpdate: onInputChange }
     const aboutUsMainDescription = {type:'text-area', fieldClass:'form-control', section:'about', field: 'mainDescription', name:'mainDescription', placeholder: '', value: about.mainDescription.value, onUpdate: onInputChange }
     const aboutImage = {type:'image-picker', images:images, fieldClass:'form-control', section:'about', field: 'aboutImage', name:'aboutImage', placeholder: '', value: about.aboutImage.value, onUpdate: onInputChange }
     const homeAboutYogaImage = {type:'image-picker', images:images, fieldClass:'form-control', section:'home', field: 'homeAboutYogaImage', name:'homeAboutYogaImage', placeholder: '', value: home.homeAboutYogaImage.value, onUpdate: onInputChange }
     const homeAboutFoodImage = {type:'image-picker', images:images, fieldClass:'form-control', section:'home', field: 'homeAboutFoodImage', name:'homeAboutFoodImage', placeholder: '', value: home.homeAboutFoodImage.value, onUpdate: onInputChange }
-    const homeAboutNatureImage = {type:'image-picker', images:images, fieldClass:'form-control', section:'home', field: 'homeAboutNatureImage', name:'homeAboutNatureImage', placeholder: '', value: home.homeAboutNatureImage.value, onUpdate: onInputChange }
+    const homeAboutAccommodationImage = {type:'image-picker', images:images, fieldClass:'form-control', section:'home', field: 'homeAboutAccommodationImage', name:'homeAboutAccommodationImage', placeholder: '', value: home.homeAboutAccommodationImage.value, onUpdate: onInputChange }
     const homeAboutMoreImage = {type:'image-picker', images:images, fieldClass:'form-control', section:'home', field: 'homeAboutMoreImage', name:'homeAboutMoreImage', placeholder: '', value: home.homeAboutMoreImage.value, onUpdate: onInputChange }
 
 	return(
@@ -50,7 +56,7 @@ const Admin = ({home, about, onInputChange, setLanguage, save })=> {
 	            </div>
             </div>
             <div className="shell">
-          		<h3>בית - אודות</h3>
+          		<h3>{menuBar.home} - {menuBar.about}</h3>
 	          	<div className="range">
 	                <div className="cell-sm-4">
 	                  <div className="form-group">
@@ -78,13 +84,13 @@ const Admin = ({home, about, onInputChange, setLanguage, save })=> {
 
 	                <div className="cell-sm-4">
 	                  <div className="form-group">
-	                    <label htmlFor="contact-name" className="form-label">טבע:</label>
-	    	 			<Field {...homeAboutCardNature}/>
-	                  	<button onClick={()=>save(homeAboutCardNature.section,homeAboutCardNature.name,homeAboutCardNature.value, homeAboutCardNature._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	                    <label htmlFor="contact-name" className="form-label">לינה:</label>
+	    	 			<Field {...homeAboutCardAccommodation}/>
+	                  	<button onClick={()=>save(homeAboutCardAccommodation.section,homeAboutCardAccommodation.name,homeAboutCardAccommodation.value, homeAboutCardAccommodation._id)} className="fa fa-arrow-circle-o-right login-button"></button>
 	                  </div>
 	                  <div className="form-group">
-	    	 			<Field {...homeAboutNatureImage}/>
-	                  	<button onClick={()=>save(homeAboutNatureImage.section,homeAboutNatureImage.name,homeAboutNatureImage.value, homeAboutNatureImage._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	    	 			<Field {...homeAboutAccommodationImage}/>
+	                  	<button onClick={()=>save(homeAboutAccommodationImage.section,homeAboutAccommodationImage.name,homeAboutAccommodationImage.value, homeAboutAccommodationImage._id)} className="fa fa-arrow-circle-o-right login-button"></button>
 	                  </div>
 	                </div>
 
@@ -102,7 +108,7 @@ const Admin = ({home, about, onInputChange, setLanguage, save })=> {
 	            </div>
             </div>
             <div className="shell">
-          		<h3>אודות</h3>
+          		<h3>{menuBar.about}</h3>
 	          	<div className="range">
 	          		<div className="cell-sm-4">
 	                  <div className="form-group">
@@ -123,6 +129,58 @@ const Admin = ({home, about, onInputChange, setLanguage, save })=> {
 	                    <label htmlFor="contact-name" className="form-label">אוכל:</label>
 	    	 			<Field {...aboutUsMainDescription}/>
 	                  	<button onClick={()=>save(aboutUsMainDescription.section,aboutUsMainDescription.name,aboutUsMainDescription.value, aboutUsMainDescription._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	                  </div>
+	                </div>
+	            </div>
+            </div>
+            <div className="shell">
+          		<h3>{menuBar.paros}</h3>
+	          	<div className="range">
+	          		<div className="cell-sm-4">
+	                  <div className="form-group">
+	                    <label htmlFor="contact-name" className="form-label">יוגה:</label>
+	    	 			<Field {...parosImage}/>
+	                  	<button onClick={()=>save(parosImage.section,parosImage.name,parosImage.value, parosImage._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	                  </div>
+	                </div>
+	                <div className="cell-sm-4">
+	                  <div className="form-group">
+	                    <label htmlFor="contact-name" className="form-label">יוגה:</label>
+	    	 			<Field {...parosTitle}/>
+	                  	<button onClick={()=>save(parosTitle.section,parosTitle.name,parosTitle.value, parosTitle._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	                  </div>
+	                </div>
+	                <div className="cell-sm-4">
+	                  <div className="form-group">
+	                    <label htmlFor="contact-name" className="form-label">אוכל:</label>
+	    	 			<Field {...parosMainDescription}/>
+	                  	<button onClick={()=>save(parosMainDescription.section,parosMainDescription.name,parosMainDescription.value, parosMainDescription._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	                  </div>
+	                </div>
+	            </div>
+            </div>
+            <div className="shell">
+          		<h3>{menuBar.accommodation}</h3>
+	          	<div className="range">
+	          		<div className="cell-sm-4">
+	                  <div className="form-group">
+	                    <label htmlFor="contact-name" className="form-label">יוגה:</label>
+	    	 			<Field {...accommodationImage}/>
+	                  	<button onClick={()=>save(accommodationImage.section,accommodationImage.name,accommodationImage.value, accommodationImage._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	                  </div>
+	                </div>
+	                <div className="cell-sm-4">
+	                  <div className="form-group">
+	                    <label htmlFor="contact-name" className="form-label">יוגה:</label>
+	    	 			<Field {...accommodationTitle}/>
+	                  	<button onClick={()=>save(accommodationTitle.section,accommodationTitle.name,accommodationTitle.value, accommodationTitle._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	                  </div>
+	                </div>
+	                <div className="cell-sm-4">
+	                  <div className="form-group">
+	                    <label htmlFor="contact-name" className="form-label">אוכל:</label>
+	    	 			<Field {...accommodationMainDescription}/>
+	                  	<button onClick={()=>save(accommodationMainDescription.section,accommodationMainDescription.name,accommodationMainDescription.value, accommodationMainDescription._id)} className="fa fa-arrow-circle-o-right login-button"></button>
 	                  </div>
 	                </div>
 	            </div>

@@ -1,27 +1,27 @@
 import React from 'react';
 import {Link} from 'react-router';
-const AboutPage = ({about, menuBar}) => {
+const AccommodationPage = ({accommodation, menuBar}) => {
 
   return (
       <main className="page-content">
         <section className="section-sm-top-133 text-center section-top-31">
           <div className="shell text-center">
-            <h5 className="tt-u">{menuBar.about}</h5>
+            <h5 className="tt-u">{menuBar.accommodation}</h5>
             <ol className="breadcrumb">
               <li><Link to="/" activeClassName="active">{menuBar.home}</Link></li>
-              <li>{menuBar.about}</li>
+              <li>{menuBar.accommodation}</li>
             </ol>
           </div>
         </section>
        
         <section className="section-md-top-145 section-sm-bottom-153 section-34">
           <div className="shell">
-            <h2 className="divider text-center">{about.aboutTitle.value}</h2>
+            <h2 className="divider text-center">{accommodation.accommodationTitle.value}</h2>
             <div className="range">
-              <div className="cell-md-4"><img src={about.aboutImage.value} alt="" width="370" height="286"/></div>
+              <div className="cell-md-4"><img src={accommodation.accommodationImage.value} alt="" width="370" height="286"/></div>
               <div className="cell-md-8 txt-base">
                 <div className="inset-md-right-30">
-                  <div className="h5">{about.mainDescription.value}</div>
+                  <div className="h5">{accommodation.mainDescription.value}</div>
                 </div>
               </div>
             </div>
@@ -117,4 +117,4 @@ const AboutPage = ({about, menuBar}) => {
       </main>
 );
 }
-export default AboutPage;
+export default AccommodationPage;

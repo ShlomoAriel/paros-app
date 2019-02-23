@@ -26,6 +26,9 @@ export default function packageReducer(state = initialState, action){
 			return R.assoc('list', newList, state)
 		case types.SET_PACKAGE_LIST:
 			return {...state, packageList: action.packageList}
+		case types.REMOVE_PACKAGE_FROM_LIST:
+			let stateAfterRemovale = packageUtils.removePackage(state, action.id)
+			return stateAfterRemovale
 		default:
 			return state;
 	}

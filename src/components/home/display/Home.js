@@ -27,7 +27,7 @@ import imageGallery4 from '../../../../public/template/images/index-18-684x864.j
 import imageGallery5 from '../../../../public/template/images/index-16-684x730.jpg';
 import imageGallery6 from '../../../../public/template/images/index-19-684x1050.jpg';
 
-const Home = ({home, packages, menuBar})=> {
+const Home = ({home, packages, menuBar, labels})=> {
 
 	return(
 		 <main className="page-content">
@@ -70,10 +70,10 @@ const Home = ({home, packages, menuBar})=> {
               </div>
               <div className="cell-xs-6 cell-md-3 cell-xs-push-2 cell-md-push-3 offset-top-30 offset-xs-top-0">
                 <div className="thumbnail-variant-1"><div className="img-link">
-                <img src={home.homeAboutNatureImage.value} alt=""/></div>
+                <img src={home.homeAboutAccommodationImage.value} alt=""/></div>
                   <div className="caption">
-                    <div className="h5 tt-u">{home.sectionNames.nature}</div>
-                    <p>{home.homeAboutNature.value}</p>
+                    <div className="h5 tt-u">{home.sectionNames.accommodation}</div>
+                    <p>{home.homeAboutAccommodation.value} <a href='#/accommodation'>{labels.more}</a></p>
                   </div>
                 </div>
               </div>
@@ -116,8 +116,7 @@ const Home = ({home, packages, menuBar})=> {
         </section>
         <section className="section-sm-top-130 text-center section-bottom-0 section-top-52">
           <div className="shell-fluid inset-left-0 inset-right-0">
-            <h2 className="divider">הגן</h2>
-            
+            <h2 className="divider">{menuBar.gallery}</h2>
             <div data-photo-swipe-gallery="gallery" className="range range-condensed">
               <div className="cell-xs-4 overflow-hidden"><a data-photo-swipe-item="" data-size="684x693" href="images/index-14-684x693_original.jpg" className="img-link img-link-2">
               <img width="684" height="693" src={imageGallery1} alt=""/></a><a data-photo-swipe-item="" data-size="684x1087" href="images/index-17-684x1087_original.jpg" className="img-link img-link-2">
