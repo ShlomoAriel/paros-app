@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types'
 import React  from 'react'
 import {Link, IndexLink} from 'react-router'
-import logo from "../../../../build/static/media/sealion.2268f3f0.png"
+import logo from "../../../../public/template/images/sealion.png"
 import image1 from '../../../../public/template/images/8.png';
 import image2 from '../../../../public/template/images/index-2-370x262.jpg';
 import image3 from '../../../../public/template/images/index-3-370x262.jpg';
