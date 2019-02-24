@@ -98,15 +98,15 @@ const Home = ({home, packages, menuBar, labels})=> {
                 { packages &&
                   packages.map(packageContent =>
                   <div className="cell-sm-4 overflow-hidden">
+                    <Link className="h5 tt-u" to={"package/"+(packageContent._id)}>
                     <div className="thumbnail">
                       <img src={packageContent.image ? packageContent.image : image1} alt="" width="683" height="482"/>
                       <div className="caption">
-                        <Link className="h5 tt-u" to={"package/"+(packageContent._id)}>
                           {packageContent.name}
-                        </Link>
                         <div className="small">...</div>
                       </div>
                     </div>
+                    </Link>
                   </div>)
                 }
                 </div>

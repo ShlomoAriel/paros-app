@@ -157,7 +157,7 @@ const initialState = {
 				},
 				headerTitle:{value:'Sea Lion Eco Lodge'},
 				headerLocationTitle:{value:'פארוס, יוון'},
-				headerSubtitle:{ value:'יוגה, אוכל, טבע'},
+				headerSubtitle:{ value:'יוגה  -  אוכל  -  לינה  -  טבע'},
 				welcomeTitle:{ value:'ברוכים הבאים'},
 				homeAboutYogaImage:{value:undefined},
 				homeAboutFoodImage:{value:undefined},

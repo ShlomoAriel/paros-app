@@ -158,3 +158,10 @@ body{
         padding:0px;
     }
 }
+.thumbnail:after {
+    height:95%;
+    width:95%;
+}
+.thumbnail:before {
+    opacity: .2;
+}
