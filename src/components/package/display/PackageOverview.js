@@ -14,6 +14,7 @@ import image9 from '../../../../public/template/images/gallery_list-9.jpg';
 const PackageOverview = ({packages, menuBar, removeItem, isAdmin})=> {
 
 	return(
+
     	<main className="page-content">
 	      <section className="section-sm-top-133 text-center section-top-31">
 	          <div className="shell text-center">
@@ -21,6 +22,7 @@ const PackageOverview = ({packages, menuBar, removeItem, isAdmin})=> {
 	            <ol className="breadcrumb">
 	              <li><Link to="/" activeClassName="active">{menuBar.home}</Link></li>
 	              <li>{menuBar.packages}</li>
+	              { isAdmin && <li><Link to="/packageForm" className="fas fa-plus" ></Link></li>}
 	            </ol>
 	          </div>
 	        </section>
@@ -32,7 +34,7 @@ const PackageOverview = ({packages, menuBar, removeItem, isAdmin})=> {
 	                  <div className="row">
 	                  {
 						packages.map( item => 
-							<div className="col-xs-12 col-sm-6 col-md-12 col-lg-12 isotope-item">
+							<div key={item._id} className="col-xs-12 col-sm-6 col-md-12 col-lg-12 isotope-item">
 								<div className="media-variant-1 thumbnail-variant-5">
 									<Link to={"/package/" + item._id} className="media-left">
 										<img src={item.image ? item.image: image1} alt=""/>

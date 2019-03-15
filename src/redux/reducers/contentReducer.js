@@ -1,6 +1,7 @@
 import * as types from '../actions/actionTypes'
 
 const initialState = {
+		galleryPath:'',
 		selectedLanguage:'english',
 		english:{
 			labels:{
@@ -20,6 +21,9 @@ const initialState = {
 				home:'Home',
 				about:'About Us',
 				paros:'Paros',
+				yoga:'Yoga',
+				more:'More',
+				food:'Food',
 				accommodation:'Accommodation',
 				contact:'Contact',
 				packages:'Packages',
@@ -57,10 +61,39 @@ const initialState = {
 				parosTitle:{value:'Paros Island'},
 				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
 			},
+			yoga:{
+				yogaImage:{},
+				yogaImage2:{},
+				yogaImage3:{},
+				yogaTitle:{value:'Paros Island'},
+				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				secondDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				thirdDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
+			food:{
+				foodImage:{},
+				foodImage2:{},
+				foodImage3:{},
+				foodTitle:{value:'Paros Island'},
+				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				secondDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				thirdDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
+			more:{
+				moreImage:{},
+				moreImage2:{},
+				moreImage3:{},
+				moreTitle:{value:'Paros Island'},
+				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				secondDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				thirdDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
 			accommodation:{
 				accommodationImage:{},
 				accommodationTitle:{value:'Accommodation'},
-				mainDescription:{value:'Accommodation content.'}
+				mainDescription:{value:'Accommodation content.'},
+				secondDescription:{value:''},
+				thirdDescription:{value:''}
 			}
 		},
 		french:{
@@ -81,6 +114,9 @@ const initialState = {
 				home:'Home',
 				about:'About Us',
 				paros:'Paros',
+				yoga:'Yoga',
+				more:'More',
+				food:'Food',
 				accommodation:'Hébergement',
 				contact:'Contact',
 				packages:'Paquets',
@@ -118,10 +154,39 @@ const initialState = {
 				parosTitle:{value:'Paros Island'},
 				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
 			},
+			yoga:{
+				yogaImage:{},
+				yogaImage2:{},
+				yogaImage3:{},
+				yogaTitle:{value:'Paros Island'},
+				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				secondDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				thirdDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
+			food:{
+				foodImage:{},
+				foodImage2:{},
+				foodImage3:{},
+				foodTitle:{value:'Paros Island'},
+				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				secondDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				thirdDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
+			more:{
+				moreImage:{},
+				moreImage2:{},
+				moreImage3:{},
+				moreTitle:{value:'Paros Island'},
+				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				secondDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				thirdDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
 			accommodation:{
 				accommodationImage:{},
 				accommodationTitle:{value:'Hébergement'},
-				mainDescription:{value:'Hébergement content.'}
+				mainDescription:{value:'Hébergement content.'},
+				secondDescription:{value:''},
+				thirdDescription:{value:''}
 			}
 		},
 		hebrew:{
@@ -142,6 +207,9 @@ const initialState = {
 				home:'בית',
 				about:'אודות',
 				paros:'פארוס',
+				yoga:'Yoga',
+				more:'More',
+				food:'Food',
 				accommodation:'לינה',
 				contact:'יצירת קשר',
 				packages:'חבילות',
@@ -179,10 +247,39 @@ const initialState = {
 				parosTitle:{value:'האי פארוס'},
 				mainDescription:{value:'אודות האי פארוס'}
 			},
+			yoga:{
+				yogaImage:{},
+				yogaImage2:{},
+				yogaImage3:{},
+				yogaTitle:{value:'Paros Island'},
+				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				secondDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				thirdDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
+			food:{
+				foodImage:{},
+				foodImage2:{},
+				foodImage3:{},
+				foodTitle:{value:'Paros Island'},
+				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				secondDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				thirdDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
+			more:{
+				moreImage:{},
+				moreImage2:{},
+				moreImage3:{},
+				moreTitle:{value:'Paros Island'},
+				mainDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				secondDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'},
+				thirdDescription:{value:'Our Company is the market leader in the area providing a professional comprehensive lettings agency and property management service from our computer linked offices. /n/nWe send tenants SMS and email property alerts to keep applicants informed as new properties come on the rental market, each property is included in our colour brochure and the property estate agents style details are displayed in our offices.'}
+			},
 			accommodation:{
 				accommodationImage:{},
 				accommodationTitle:{value:'לינה'},
-				mainDescription:{value:'לינה.'}
+				mainDescription:{value:'לינה.'},
+				secondDescription:{value:''},
+				thirdDescription:{value:''}
 			}
 		}
 	}
@@ -194,6 +291,8 @@ export default function adminReducer(state = initialState, action){
 			return R.assocPath([state.selectedLanguage, action.section, action.field, 'value'], action.value,state)
 		case types.SET_LANGUAGE:
 			return R.assoc('selectedLanguage', action.language,state)
+		case types.SET_GALLERY_PATH:
+			return R.assoc('galleryPath', action.galleryPath,state)
 		case types.SET_CONTENT_MAP:
 			// let newState = R.clone(state)
 			let content = {}

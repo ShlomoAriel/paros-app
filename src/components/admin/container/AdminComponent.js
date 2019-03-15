@@ -34,6 +34,15 @@ function mapStateToProps(state) {
     let paros = state.content[state.content.selectedLanguage].paros 
         ? state.content[state.content.selectedLanguage].paros
         : state.content[state.content.selectedLanguage].paros
+    let yoga = state.content[state.content.selectedLanguage].yoga 
+        ? state.content[state.content.selectedLanguage].yoga
+        : state.content[state.content.selectedLanguage].yoga
+    let food = state.content[state.content.selectedLanguage].food 
+        ? state.content[state.content.selectedLanguage].food
+        : state.content[state.content.selectedLanguage].food
+    let more = state.content[state.content.selectedLanguage].more 
+        ? state.content[state.content.selectedLanguage].more
+        : state.content[state.content.selectedLanguage].more
     let accommodation = state.content[state.content.selectedLanguage].accommodation 
         ? state.content[state.content.selectedLanguage].accommodation
         : state.content[state.content.selectedLanguage].accommodation
@@ -44,6 +53,9 @@ function mapStateToProps(state) {
         home:content,
         about:about,
         paros:paros,
+        yoga:yoga,
+        food:food,
+        more:more,
         accommodation:accommodation,
         menuBar:menuBar
     }

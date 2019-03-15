@@ -16,6 +16,10 @@ export function setLanguage(language){
     return { type: 'SET_LANGUAGE', language:language };
 }
 
+export function setGalleryPath(galleryPath){
+    return { type: 'SET_GALLERY_PATH', galleryPath: galleryPath };
+}
+
 export function setContentMap(contentMap){
     return {
         type: types.SET_CONTENT_MAP,

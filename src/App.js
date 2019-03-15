@@ -38,7 +38,7 @@ class App extends Component {
     }
   render() {
     return (
-        <div className="page">
+        <div className={this.props.rtl ? 'page rtl' : 'page'}>
           {
             this.props.loading && <Loader/>
           }
@@ -53,6 +53,8 @@ function mapStateToProps(state) {
   return{
     authenticated:state.login.authenticated,
     loading:state.admin.loading,
+    rtl:state.content.selectedLanguage == 'hebrew'
+
   }
 }
 function mapDispatchToProps(dispatch) {

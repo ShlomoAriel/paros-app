@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router';
+import {connect} from 'react-redux'
 import {Link} from 'react-router';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -24,7 +26,7 @@ class ImageGallery2 extends React.Component {
     function importAll(r) {
       return r.keys().map(r)
     }
-    let images = importAll(require.context('../../../public/template/images/img', false, /\.(png|jpe?g|svg)$/));
+    let images = importAll(require.context('../../../public/template/images/img', false, /\.(png|jpe?g|svg|PNG)$/));
     images = images.map(image=>{
       return { original:image, thumbnail:image, name: image.substr(image.lastIndexOf('/') + 1 )}
     })
@@ -56,4 +58,15 @@ class ImageGallery2 extends React.Component {
     );
   }
 }
-export default ImageGallery2
+
+function mapStateToProps(state) {
+  return{
+    galleryPath:state.galleryPath,
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+    }
+}
+export default withRouter(connect( mapStateToProps, mapDispatchToProps )(ImageGallery2))

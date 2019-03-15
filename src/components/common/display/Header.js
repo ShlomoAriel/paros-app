@@ -12,7 +12,7 @@ const Header = ({home, menuBar, setLanguage, logout, authenticated, toggleMenu, 
     <div className={'header-wrapper ' + (menuState? 'active':'')}>
 		  <header className="page-head bg-lighter header-2 text-center" style={{backgroundImage:"url("+image1+")"}}>
         <div className="top-bar-wrapper">
-          <ul className="list-inline">
+          <ul className="list-inline ltr">
             <li onClick={()=>setLanguage('hebrew')}><a>עברית</a></li>
             <li onClick={()=>setLanguage('english')}><a>English</a></li>
             <li onClick={()=>setLanguage('french')}><a>François</a></li>
@@ -23,7 +23,7 @@ const Header = ({home, menuBar, setLanguage, logout, authenticated, toggleMenu, 
           <div className="my-bars"><i className="fas fa-bars" onClick={toggleMenu}></i></div>
         </div>
         <div className="jumbotron-variant-1">
-          <span class="location-title">
+          <span className="location-title">
             <span>{home.headerLocationTitle.value}</span>
             <span><img src={logo}/></span>
           </span>

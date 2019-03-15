@@ -5,6 +5,9 @@ import HomePage from './components/home/HomePage';
 import HomeComponent from './components/home/container/HomeComponent';
 import AboutPageComponent from './components/about/container/AboutPageComponent';
 import ParosPageComponent from './components/paros/container/ParosPageComponent';
+import YogaPageComponent from './components/yoga/container/YogaPageComponent';
+import FoodPageComponent from './components/food/container/FoodPageComponent';
+import MorePageComponent from './components/more/container/MorePageComponent';
 import AccommodationPageComponent from './components/accommodation/container/AccommodationPageComponent';
 import ContactComponent from './components/contact/container/ContactComponent';
 import PackageOverviewComponent from './components/package/container/PackageOverviewComponent';
@@ -22,6 +25,9 @@ export default (
     <Route path="/login" component={LoginComponent} />
     <Route path="/about" component={AboutPageComponent} />
     <Route path="/paros" component={ParosPageComponent} />
+    <Route path="/yoga" component={YogaPageComponent} />
+    <Route path="/food" component={FoodPageComponent} />
+    <Route path="/more" component={MorePageComponent} />
     <Route path="/accommodation" component={AccommodationPageComponent} />
     <Route path="/contact" component={ContactComponent} />
     <Route path="/gallery" component={GalleryPage} />
