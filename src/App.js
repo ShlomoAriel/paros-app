@@ -6,6 +6,7 @@ import Footer from './components/common/Footer'
 import Loader from './components/Loader/Loader'
 import * as contentActions from './redux/actions/contentActions'
 import * as packageActions from './redux/actions/packageActions'
+import * as accommodationActions from './redux/actions/accommodationActions'
 import * as loginActions from './redux/actions/loginActions'
 import * as adminActions from './redux/actions/adminActions'
 import * as config from './utils/config'
@@ -21,7 +22,7 @@ class App extends Component {
       if( !(this.props.authenticated)){
           const jwt = localStorage.getItem('token')
           if(!jwt){
-            this.props.router.push('/login')
+            this.props.router.push('/')
           } else{
             this.props.setToken(jwt)
           }
@@ -30,10 +31,10 @@ class App extends Component {
     componentDidUpdate(prevProps, prevState) {
       console.log((config.restricted.includes(this.props.location.pathname)))
       if( (!(this.props.authenticated)) && 
-          (this.props.location.pathname != '/login') && 
+          (this.props.location.pathname != '/') && 
           (config.restricted.includes(this.props.location.pathname)) ) 
       {
-         this.props.router.push('/login')
+         this.props.router.push('/')
       }
     }
   render() {
@@ -62,6 +63,7 @@ function mapDispatchToProps(dispatch) {
         getContentFromServer(){
           dispatch( contentActions.getContentFromServer() )
           dispatch( packageActions.getPackagesFromServer() )
+          dispatch( accommodationActions.getAccommodationsFromServer() )
         },
         setToken(token){
           dispatch(loginActions.setToken(token))

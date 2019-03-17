@@ -1,13 +1,11 @@
 // import PropTypes from 'prop-types'
 import React  from 'react'
 import {Link, IndexLink} from 'react-router'
-import logo from "../../../../public/template/images/sealion.png"
-import image1 from '../../../../public/template/images/8.png';
-import image2 from '../../../../public/template/images/index-2-370x262.jpg';
-import image3 from '../../../../public/template/images/index-3-370x262.jpg';
+import logo from   "../../../../public/template/images/sealion.png"
+import image1 from '../../../../public/template/images/head.png';
+
 
 const Header = ({home, menuBar, setLanguage, logout, authenticated, toggleMenu, menuState})=> {
-	  			
 	return(
     <div className={'header-wrapper ' + (menuState? 'active':'')}>
 		  <header className="page-head bg-lighter header-2 text-center" style={{backgroundImage:"url("+image1+")"}}>

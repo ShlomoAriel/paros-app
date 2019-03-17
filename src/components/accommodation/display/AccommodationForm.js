@@ -5,10 +5,9 @@ import {Link} from 'react-router'
 import R from 'ramda'
 import moment from 'moment'
 import image1 from '../../../../public/template/images/img/image61).jpg';
-
 import Field from '../../../components/CustomElements/Field'
 
-const PackageForm = ({form,images, fields, updateField, addPackage, toggleModal, isModalOpen})=> {
+const AccommodationForm = ({form,images, fields, updateField, addAccommodation, toggleModal, isModalOpen})=> {
 	return(
     <div>
       <section className="section-md-top-145 section-sm-bottom-153 section-34">
@@ -38,7 +37,8 @@ const PackageForm = ({form,images, fields, updateField, addPackage, toggleModal,
               </div>
             <div className="cell-sm-8">
               <div className="text-center offset-top-30">
-                  <button onClick={()=>addPackage(form)} type="submit" className="btn btn-transparent btn-sm">Save</button>
+import image1 from '../../../../public/template/images/img/image61).jpg';
+                  <button onClick={()=>addAccommodation(form)} type="submit" className="btn btn-transparent btn-sm">Save</button>
               </div>
             </div>
           </div>
@@ -49,5 +49,5 @@ const PackageForm = ({form,images, fields, updateField, addPackage, toggleModal,
 	)
 }
 
-export default PackageForm
+export default AccommodationForm
 

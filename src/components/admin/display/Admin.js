@@ -3,13 +3,13 @@ import React  from 'react'
 import {Link} from 'react-router'
 import * as adminActions from '../../../redux/actions/adminActions'
 import Field from '../../../components/CustomElements/Field'
-import image1 from '../../../images/gallery_list-1.jpg'
 
 const Admin = ({home, about, paros, yoga, food, more, accommodation, menuBar, onInputChange, setLanguage, save })=> {
 		function importAll(r) {
 	      return r.keys().map(r)
 	    }
-	    let images = importAll(require.context('../../../images/img', false, /\.(png|jpe?g|svg)$/));
+	    // let images = importAll(require.context('../../../images/img', false, /\.(png|jpe?g|svg)$/));
+    let images = importAll(require.context('../../../../public/template/images/img', false, /\.(png|jpe?g|svg|PNG)$/));
     const homeWelcomeTitle = { fieldClass:'form-control', section:'home', field: 'welcomeTitle', name:'welcomeTitle', placeholder: 'Welcome Text', value: home.welcomeTitle.value, onUpdate: onInputChange }
     const homeWelcomeContent = {type:'text-area', fieldClass:'form-control', section:'home',field: 'welcomeText', name:'welcomeText', placeholder: 'Welcome Text', value: home.welcomeText.value, onUpdate: onInputChange }
     const homeAboutCardYoga = {type:'text-area', fieldClass:'form-control', section:'home',field: 'homeAboutYoga', name:'homeAboutYoga', placeholder: '', value: home.homeAboutYoga.value, onUpdate: onInputChange }

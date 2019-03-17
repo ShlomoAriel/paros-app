@@ -3,7 +3,7 @@ import React  from 'react'
 import Checkbox from '../../../components/CustomElements/Checkbox/Checkbox'
 import {Link} from 'react-router'
 import TextInput from '../../../components/CustomElements/TextInput/TextInput'
-import image1 from '../../../images/gallery_list-1.jpg';
+import image1 from '../../../../public/template/images/img/image61).jpg';
 import R from 'ramda'
 import moment from 'moment'
 

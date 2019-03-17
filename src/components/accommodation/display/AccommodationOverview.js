@@ -3,18 +3,18 @@ import React  from 'react'
 import {Link} from 'react-router'
 import image1 from '../../../../public/template/images/img/image61).jpg';
 
-const PackageOverview = ({packages, menuBar, removeItem, isAdmin})=> {
+const AccommodationOverview = ({accommodations, menuBar, removeItem, isAdmin})=> {
 
 	return(
 
     	<main className="page-content">
 	      <section className="section-sm-top-133 text-center section-top-31">
 	          <div className="shell text-center">
-	            <Link to="/package"><h5 className="tt-u">{menuBar.packages}</h5></Link>
+	            <Link to="/accommodation"><h5 className="tt-u">{menuBar.accommodations}</h5></Link>
 	            <ol className="breadcrumb">
 	              <li><Link to="/" activeClassName="active">{menuBar.home}</Link></li>
-	              <li>{menuBar.packages}</li>
-	              { isAdmin && <li><Link to="/packageForm" className="fas fa-plus" ></Link></li>}
+	              <li>{menuBar.accommodations}</li>
+	              { isAdmin && <li><Link to="/accommodationForm" className="fas fa-plus" ></Link></li>}
 	            </ol>
 	          </div>
 	        </section>
@@ -25,27 +25,27 @@ const PackageOverview = ({packages, menuBar, removeItem, isAdmin})=> {
 	                <div className="isotope">
 	                  <div className="row">
 	                  {
-						packages.map( item => 
+						accommodations.map( item => 
 							<div key={item._id} className="col-xs-12 col-sm-6 col-md-12 col-lg-12 isotope-item">
 								<div className="media-variant-1 thumbnail-variant-5">
-									<Link to={"/package/" + item._id} className="media-left">
+									<Link to={"/accommodation/" + item._id} className="media-left">
 										<img src={item.image ? item.image: image1} alt=""/>
 									</Link>
 									<div className="caption media-body">
 									{ isAdmin &&
 										<div className="button-holder">
-											<Link to={"/packageForm/" +  (item && item._id)}>
+											<Link to={"/accommodationForm/" +  (item && item._id)}>
 												<i className="fas fa-pencil"></i>
 											</Link>
 											<i className="fas fa-trash" onClick={()=>removeItem(item._id)}></i>
 										</div>
 									}
-										<Link className="h5 tt-u" to={"package/"+(item._id)}>{item.name}</Link>
+										<Link className="h5 tt-u" to={"accommodation/"+(item._id)}>{item.name}</Link>
 											{item.description && <p>{item.description}</p>}
 											{item.meals && <p>Meals: {item.meals}</p>}
 											{item.accommodation && <p>Accommadation: {item.accommodation}</p>}
 											{item.price && <p>Price: {item.price}</p>}
-										<Link to={"/package/" + item._id}><h5 className="btn-link">Learn More</h5></Link>
+										<Link to={"/accommodation/" + item._id}><h5 className="btn-link">Learn More</h5></Link>
 									</div>
 								</div>
 							</div>
@@ -70,5 +70,5 @@ const PackageOverview = ({packages, menuBar, removeItem, isAdmin})=> {
 	)
 }
 
-export default PackageOverview
+export default AccommodationOverview
 

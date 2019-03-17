@@ -171,7 +171,12 @@ body{
 .ltr{
     direction: ltr;
 }
-.rtl .rd-navbar-static .rd-navbar-nav > li + li{
-        margin-left: 0px;
-        margin-right: 78px;
+@media (min-width: 780px){
+    .rtl .rd-navbar-static .rd-navbar-nav > li + li{
+            margin-left: 0px;
+            margin-right: 78px;
+    }
+}
+.page-head{
+    background-size:cover;
 }

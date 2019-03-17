@@ -5,16 +5,6 @@ import {Link} from 'react-router';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 
-import image1 from '../../../public/template/images/gallery_justified-1.jpg';
-import image2 from '../../../public/template/images/gallery_justified-2.jpg';
-import image3 from '../../../public/template/images/gallery_justified-3.jpg';
-import image4 from '../../../public/template/images/gallery_justified-4.jpg';
-import image5 from '../../../public/template/images/gallery_justified-5.jpg';
-import image6 from '../../../public/template/images/gallery_justified-6.jpg';
-import image7 from '../../../public/template/images/gallery_justified-7.jpg';
-import image8 from '../../../public/template/images/gallery_justified-8.jpg';
-import image9 from '../../../public/template/images/gallery_justified-9.jpg';
-
 class ImageGallery2 extends React.Component {
 
   handleImageLoad(event) {

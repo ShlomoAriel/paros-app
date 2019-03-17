@@ -6,26 +6,7 @@ import TextInput from '../../../components/CustomElements/TextInput/TextInput'
 import TextAreaInput from '../../../components/CustomElements/TextAreaInput/TextAreaInput'
 
 
-import image1 from '../../../images/img/image1.jpg';
-import image10 from '../../../../public/template/images/7.png';
-import image9 from '../../../../public/template/images/4.png';
-import image11 from '../../../../public/template/images/3.png';
-import image12 from '../../../../public/template/images/6.png';
-import image4 from '../../../../public/template/images/index-4-683x482.jpg';
-import image5 from '../../../../public/template/images/index-5-683x482.jpg';
-import image6 from '../../../../public/template/images/index-6-683x482.jpg';
-import image7 from '../../../../public/template/images/index-7-1025x639.jpg';
-import image8 from '../../../../public/template/images/index-8-1025x639.jpg';
-import image91 from '../../../../public/template/images/index-9-514x550.jpg';
-import image101 from '../../../../public/template/images/index-10-514x670.jpg';
-import image111 from '../../../../public/template/images/index-11-514x550.jpg';
-import image121 from '../../../../public/template/images/index-12-514x730.jpg';
-import imageGallery1 from '../../../../public/template/images/index-14-684x693.jpg';
-import imageGallery2 from '../../../../public/template/images/index-17-684x1087.jpg';
-import imageGallery3 from '../../../../public/template/images/index-15-684x916.jpg';
-import imageGallery4 from '../../../../public/template/images/index-18-684x864.jpg';
-import imageGallery5 from '../../../../public/template/images/index-16-684x730.jpg';
-import imageGallery6 from '../../../../public/template/images/index-19-684x1050.jpg';
+import image1 from '../../../../public/template/images/img/image61).jpg';
 
 const Home = ({home, packages, menuBar, labels})=> {
 
