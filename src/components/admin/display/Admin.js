@@ -25,7 +25,7 @@ const Admin = ({home, about, paros, yoga, food, more, accommodation, menuBar, on
 	const yogaThirdDescription = {type:'text-area', fieldClass:'form-control', section:'yoga', field: 'thirdDescription', name:'thirdDescription', placeholder: '', value: yoga.thirdDescription.value, onUpdate: onInputChange }
 	const yogaImage = {type:'image-picker', images:images, fieldClass:'form-control', section:'yoga', field: 'yogaImage', name:'yogaImage', placeholder: '', value: yoga.yogaImage.value, onUpdate: onInputChange }
 	const yogaImage2 = {type:'image-picker', images:images, fieldClass:'form-control', section:'yoga', field: 'yogaImage2', name:'yogaImage2', placeholder: '', value: yoga.yogaImage2.value, onUpdate: onInputChange }
-	const yogaImage3 = {type:'image-picker', images:images, fieldClass:'form-control', section:'food', field: 'yogaImage3', name:'yogaImage3', placeholder: '', value: yoga.yogaImage3.value, onUpdate: onInputChange }
+	const yogaImage3 = {type:'image-picker', images:images, fieldClass:'form-control', section:'yoga', field: 'yogaImage3', name:'yogaImage3', placeholder: '', value: yoga.yogaImage3.value, onUpdate: onInputChange }
 	const foodTitle = { fieldClass:'form-control', section:'food',field: 'foodTitle', name:'foodTitle', placeholder: 'אוכל', value: food.foodTitle.value, onUpdate: onInputChange }
 	const foodMainDescription = {type:'text-area', fieldClass:'form-control', section:'food', field: 'mainDescription', name:'mainDescription', placeholder: 'אוכל', value: food.mainDescription.value, onUpdate: onInputChange }
 	const foodSecondDescription = {type:'text-area', fieldClass:'form-control', section:'food', field: 'secondDescription', name:'secondDescription', placeholder: 'אוכל', value: food.secondDescription.value, onUpdate: onInputChange }
@@ -354,32 +354,34 @@ const Admin = ({home, about, paros, yoga, food, more, accommodation, menuBar, on
 	                </div>
 	            </div>
             </div>
-            <div className="shell">
-          		<h3>{menuBar.accommodation}</h3>
-	          	<div className="range">
-	          		<div className="cell-sm-4">
-	                  <div className="form-group">
-	                    <label htmlFor="contact-name" className="form-label">לינה:</label>
-	    	 			<Field {...accommodationImage}/>
-	                  	<button onClick={()=>save(accommodationImage.section,accommodationImage.name,accommodationImage.value, accommodationImage._id)} className="fa fa-arrow-circle-o-right login-button"></button>
-	                  </div>
-	                </div>
-	                <div className="cell-sm-4">
-	                  <div className="form-group">
-	                    <label htmlFor="contact-name" className="form-label">לינה:</label>
-	    	 			<Field {...accommodationTitle}/>
-	                  	<button onClick={()=>save(accommodationTitle.section,accommodationTitle.name,accommodationTitle.value, accommodationTitle._id)} className="fa fa-arrow-circle-o-right login-button"></button>
-	                  </div>
-	                </div>
-	                <div className="cell-sm-4">
-	                  <div className="form-group">
-	                    <label htmlFor="contact-name" className="form-label">לינה:</label>
-	    	 			<Field {...accommodationMainDescription}/>
-	                  	<button onClick={()=>save(accommodationMainDescription.section,accommodationMainDescription.name,accommodationMainDescription.value, accommodationMainDescription._id)} className="fa fa-arrow-circle-o-right login-button"></button>
-	                  </div>
-	                </div>
-	            </div>
-            </div>
+            {
+          //   <div className="shell">
+          // 		<h3>{menuBar.accommodation}</h3>
+	         //  	<div className="range">
+	         //  		<div className="cell-sm-4">
+	         //          <div className="form-group">
+	         //            <label htmlFor="contact-name" className="form-label">לינה:</label>
+	    	 			// <Field {...accommodationImage}/>
+	         //          	<button onClick={()=>save(accommodationImage.section,accommodationImage.name,accommodationImage.value, accommodationImage._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	         //          </div>
+	         //        </div>
+	         //        <div className="cell-sm-4">
+	         //          <div className="form-group">
+	         //            <label htmlFor="contact-name" className="form-label">לינה:</label>
+	    	 			// <Field {...accommodationTitle}/>
+	         //          	<button onClick={()=>save(accommodationTitle.section,accommodationTitle.name,accommodationTitle.value, accommodationTitle._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	         //          </div>
+	         //        </div>
+	         //        <div className="cell-sm-4">
+	         //          <div className="form-group">
+	         //            <label htmlFor="contact-name" className="form-label">לינה:</label>
+	    	 			// <Field {...accommodationMainDescription}/>
+	         //          	<button onClick={()=>save(accommodationMainDescription.section,accommodationMainDescription.name,accommodationMainDescription.value, accommodationMainDescription._id)} className="fa fa-arrow-circle-o-right login-button"></button>
+	         //          </div>
+	         //        </div>
+	         //    </div>
+          //   </div>
+        }
         </div>
 	)
 }
